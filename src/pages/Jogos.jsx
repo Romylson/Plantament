@@ -22,7 +22,13 @@ export default function Jogos() {
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{jogo.nome}</h5>
                 <p className="card-text">{jogo.descricao}</p>
-                <Link to={jogo.rota} className={`btn ${jogo.botao} mt-auto`}>
+                <Link to={jogo.rota} className={`btn ${jogo.botao} mt-auto`}
+                style={{
+                  backgroundColor: "#7c3aed",
+                  borderColor: "#7c3aed",
+                  color: "#fff"
+                }}
+                >
                   Jogar
                 </Link>
                 <p className="text-muted small mt-2">

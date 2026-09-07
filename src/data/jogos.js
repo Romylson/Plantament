@@ -20,7 +20,7 @@ export const jogos = [
     autorImagem: "Fotos de domínio público (Wikimedia Commons, Unsplash, Pixabay)",
     autorJogo: "Romylson Pereira Souza",
     rota: "/jogos/associacao",
-    botao: "btn-primary",
+    botao: "btn-purple",
   },
   {
     nome: "Quiz Científico",
@@ -29,7 +29,7 @@ export const jogos = [
     autorImagem: "Fotos de domínio público (Wikimedia Commons, Unsplash, Pixabay)",
     autorJogo: "Romylson Pereira Souza",
     rota: "/jogos/quiz",
-    botao: "btn-success",
+    botao: "btn-purple",
   },
   {
     nome: "Memória com Plantas",
@@ -38,7 +38,7 @@ export const jogos = [
     autorImagem: "Fotos de domínio público (Wikimedia Commons, Unsplash, Pixabay)",
     autorJogo: "Romylson Pereira Souza",
     rota: "/jogos/memoria",
-    botao: "btn-warning",
+    botao: "btn-purple",
   },
   {
     nome: "Desafio do Laboratório",
@@ -47,7 +47,7 @@ export const jogos = [
     autorImagem: "Fotos de domínio público (Wikimedia Commons, Unsplash, Pixabay)",
     autorJogo: "Romylson Pereira Souza",
     rota: "/jogos/lab",
-    botao: "btn-primary",
+    botao: "btn-purple",
   },
   {
     nome: "Palavras Cruzadas",
@@ -56,7 +56,7 @@ export const jogos = [
     autorImagem: "Fotos de domínio público (Wikimedia Commons, Unsplash, Pixabay)",
     autorJogo: "Romylson Pereira Souza",
     rota: "/jogos/palavras-cruzadas",
-    botao: "btn-warning",
+    botao: "btn-purple",
   },
   {
     nome: "Caça-palavras",
@@ -65,7 +65,7 @@ export const jogos = [
     autorImagem: "Fotos de domínio público (Wikimedia Commons, Unsplash, Pixabay)",
     autorJogo: "Romylson Pereira Souza",
     rota: "/jogos/caca-palavras",
-    botao: "btn-warning",
+    botao: "btn-purple",
   },
   {
     nome: "Xadrez",
@@ -74,7 +74,7 @@ export const jogos = [
     autorImagem: "Fotos de domínio público (Wikimedia Commons, Unsplash, Pixabay)",
     autorJogo: "Romylson Pereira Souza",
     rota: "/jogos/xadrez",
-    botao: "btn-primary",
+    botao: "btn-purple",
   },
   {
     nome: "Quebra-cabeça",
@@ -83,7 +83,7 @@ export const jogos = [
     autorImagem: "Fotos de domínio público (Wikimedia Commons, Unsplash, Pixabay)",
     autorJogo: "Romylson Pereira Souza",
     rota: "/jogos/quebra-cabeca",
-    botao: "btn-warning",
+    botao: "btn-purple",
   },
   {
     nome: "Classificação",
@@ -92,7 +92,7 @@ export const jogos = [
     autorImagem: "Fotos de domínio público (Wikimedia Commons, Unsplash, Pixabay)",
     autorJogo: "Romylson Pereira Souza",
     rota: "/jogos/classificacao",
-    botao: "btn-warning",
+    botao: "btn-purple",
   },
   {
     nome: "Caminho Neuronal",
@@ -101,7 +101,7 @@ export const jogos = [
     autorImagem: "Fotos de domínio público (Wikimedia Commons, Unsplash, Pixabay)",
     autorJogo: "Romylson Pereira Souza",
     rota: "/jogos/caminhoneuronal",
-    botao: "btn-warning",
+    botao: "btn-purple",
   },
   {
     nome: "Detetive Cognitivo",
@@ -110,7 +110,7 @@ export const jogos = [
     autorImagem: "Fotos de domínio público (Wikimedia Commons, Unsplash, Pixabay)",
     autorJogo: "Romylson Pereira Souza",
     rota: "/jogos/detective-cognitivo",
-    botao: "btn-warning",
+    botao: "btn-purple",
   },
   {
     nome: "Sequência Doença",
@@ -119,7 +119,7 @@ export const jogos = [
     autorImagem: "Fotos de domínio público (Wikimedia Commons, Unsplash, Pixabay)",
     autorJogo: "Romylson Pereira Souza",
     rota: "/jogos/sequencia-doenca",
-    botao: "btn-warning",
+    botao: "btn-purple",
   },
   
 ];

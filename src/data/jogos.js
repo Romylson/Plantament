@@ -10,7 +10,6 @@ import classificacaoImg from "../assets/classificacao.jpg";
 import caminhoNeuronalImg from "../assets/caminhoneuronal.jpg";
 import detetiveCognitivoImg from "../assets/detetivecognitivo.jpg";
 import sequenciaDoencaImg from "../assets/sequenciadoenca.jpg";
-import ./index.css;
 
 
 export const jogos = [

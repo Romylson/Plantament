@@ -2,6 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { jogos } from "../data/jogos";
+import "./index.css";
 
 export default function Jogos() {
   return (

@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --background-color:#ecee61;
+  --background-color:#450d5f;
   --text-color: #000;
-  --page-bg: #ecee61;  
-  --header-bg: #ecee61;   
+  --page-bg: #4e0f5a;  
+  --header-bg: #47125c;   
 }
 
 
 html, body, #root {
-  background-color: var(--page-bg #ecee61);
+  background-color: var(--page-bg #4b105a);
 }
 
 body {
@@ -33,13 +33,13 @@ main {
 }
 
 footer {
-  background: var(--page-bg, #eed953);
+  background: var(--page-bg, #3c0942);
   color: var(--text-color);
 }
 
 .app-header {
-  background: #ecee61; 
-  border-bottom: 2px solid #e5ee66;
+  background: #e97cec; 
+  border-bottom: 2px solid #d366ee;
   padding: 0.65rem 1rem;
 }
 
@@ -56,7 +56,7 @@ footer {
 .site-title {
   font-weight: 800;
   font-size: clamp(1.5rem, 2.8vw, 2.1rem);
-  color: #134b1f;
+  color: #41084d;
   letter-spacing: 0.4px;
   white-space: nowrap;
 }

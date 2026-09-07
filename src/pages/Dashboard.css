@@ -133,7 +133,7 @@ body {
 .interactive { transition: transform 0.2s ease, box-shadow 0.2s ease; }
 .interactive:hover { transform: translateY(-4px); box-shadow: 0 8px 22px rgba(8, 38, 14, 0.2); }
 .emoji { font-size: 1.7rem; }
-.inline-link { display: inline-block; margin-top: 0.75rem; color: #155f22; font-weight: 700; }
+.inline-link { display: inline-block; margin-top: 0.75rem; color: #6b1b6b; font-weight: 700; }
 
 .hamburger-button { display: none; }
 @media (max-width: 900px) {

@@ -81,3 +81,8 @@ footer {
 .crossword__cell--highlighted {
   background: #ffe98a !important;
 }
+
+.btn-purple {
+    background-color: #f1eaea;
+    color: #450d5f;
+}

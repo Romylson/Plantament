@@ -1,5 +1,5 @@
 .plantas-page-wrapper {
-  background: #e4e261;
+  background: #f4aefa;
   min-height: calc(100vh - 90px);
   padding: 18px 0 32px;
 }
@@ -11,7 +11,7 @@
 }
 
 .plantas-page-container h1 {
-  color: #e4e261;
+  color: #f4aefa;
   font-size: 52px;
   margin: 4px 0;
 }
@@ -37,7 +37,7 @@
 }
 
 .plantas-filtros-topo button {
-  color: #2fa757;
+  color: #f4aefa;
   font-size: 18px;
   line-height: 1.2;
   display: inline-flex;
@@ -64,7 +64,7 @@
 .plantas-alfabeto button {
   border: none;
   background: transparent;
-  color: #e4e261;
+  color: #f4aefa;
   font-size: 37px;
   line-height: 1;
 }

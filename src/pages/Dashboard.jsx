@@ -9,7 +9,7 @@ import IntroBlock from "../components/IntroBlock";
 import logosParceiros from "../assets/parceiros-rodapé.png";
 import cerebroplanta from "../assets/cerebroplanta.png";
 import logoPlantamente from "../assets/plantamente.jpg";
-import cerebroroxo from "../assets/cerebroroxo.jpg"
+import cerebroroxo from "../assets/cerebroroxo.jpg";
 
 // Mapeamento dos 6 cards principais da tela
 const cardsPrincipais = [

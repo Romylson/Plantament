@@ -45,23 +45,49 @@ a {
   flex-direction: column;
 }
 
+/* ==========================================================================
+   1. HEADER / NAVBAR SUPERIOR - AJUSTE DA LOGO
+   ========================================================================== */
+
+/* Link que envelopa a imagem da logo e o texto ao lado */
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem; /* Espaço entre a imagem da logo e o texto */
+  text-decoration: none;
+}
+
+/* Estilo da imagem da logo ao lado */
+.header-logo-img {
+  height: 42px; /* Ajuste a altura da logo conforme a necessidade */
+  width: auto;
+  object-fit: contain;
+  border-radius: 6px; /* Opcional: para suavizar cantos se for quadrada */
+}
+
+/* Bloco que organiza o Título e o Subtítulo na vertical */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
 .logo-title {
   font-family: 'Georgia', serif;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #31114b;
   line-height: 1;
 }
 
 .logo-title small {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #31114b;
 }
 
 .logo-subtitle {
-  font-size: 0.55rem;
+  font-size: 0.5rem;
   font-weight: 700;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.2px;
   color: #6a6a6a;
   margin-top: 2px;
 }

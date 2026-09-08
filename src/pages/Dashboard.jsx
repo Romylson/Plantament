@@ -135,7 +135,7 @@ export default function Dashboard() {
           </div>
 
           <div className="hero-illustration">
-            <img src="/images/hero-brain-plants.png" alt="Cérebro e Plantas Medicinais" />
+            <img src="/images/cerebroplanta.png" alt="Cérebro e Plantas Medicinais" />
           </div>
 
           <div className="hero-slogan-card">

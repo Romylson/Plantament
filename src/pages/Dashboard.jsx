@@ -7,6 +7,7 @@ import BannerDiferenciais from "../components/BannerDiferenciais";
 import DiferenciaisInovadores from "../components/DiferenciaisInovadores";
 import IntroBlock from "../components/IntroBlock";
 import logosParceiros from "../assets/parceiros-rodapé.png";
+import cerebroplanta from "../assets/cerebroplanta.png";
 
 // Mapeamento dos 6 cards principais da tela
 const cardsPrincipais = [
@@ -135,7 +136,7 @@ export default function Dashboard() {
           </div>
 
           <div className="hero-illustration">
-            <img src="/images/cerebroplanta.png" alt="Cérebro e Plantas Medicinais" />
+            <img src={cerebroplanta} alt="Cérebro e Plantas Medicinais" />
           </div>
 
           <div className="hero-slogan-card">

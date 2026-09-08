@@ -10,6 +10,7 @@ import logosParceiros from "../assets/parceiros-rodapé.png";
 import cerebroplanta from "../assets/cerebroplanta.png";
 import logoPlantamente from "../assets/plantamente.jpg";
 import cerebroroxo from "../assets/cerebroroxo.jpg";
+import plantamedicinal from "../assets/plantamedicinal.jpg";
 
 // Mapeamento dos 6 cards principais da tela
 const cardsPrincipais = [
@@ -29,7 +30,7 @@ const cardsPrincipais = [
     titulo: "Descubra as Plantas Medicinais",
     descricao: "Espécies, compostos bioativos e evidências no Alzheimer.",
     rota: "/plantas",
-    img: "/icons/plant-3d.png",
+    img: plantamedicinal,
   },
   {
     titulo: "Moléculas em Destaque",

@@ -11,7 +11,10 @@ import cerebroplanta from "../assets/cerebroplanta.png";
 import logoPlantamente from "../assets/plantamente.jpg";
 import cerebroroxo from "../assets/cerebroroxo.jpg";
 import plantamedicinal from "../assets/plantamedicinal.jpg";
-import molecula from "../assets/molecula.jfif";
+import molecula from "../assets/molecula.jpeg";
+import farmacoroxo from "../assets/farmacoroxo.jfif";
+import aprenda from "../assets/aprenda.jpg";
+import qualidade from "../assets/qualidade.jfif";
 
 // Mapeamento dos 6 cards principais da tela
 const cardsPrincipais = [
@@ -25,7 +28,7 @@ const cardsPrincipais = [
     titulo: "Explore a Farmacologia",
     descricao: "Alvos moleculares, fármacos e compostos naturais.",
     rota: "/farmacos",
-    img: "/icons/pharma-3d.png",
+    img: farmacoroxo,
   },
   {
     titulo: "Descubra as Plantas Medicinais",
@@ -43,13 +46,13 @@ const cardsPrincipais = [
     titulo: "Aprenda",
     descricao: "Mapas mentais, fluxogramas, linha do tempo, quiz e mais.",
     rota: "/educacional",
-    img: "/icons/books-3d.png",
+    img: aprenda,
   },
   {
     titulo: "Qualidade de Vida",
     descricao: "Exercício, dieta, sono, natureza e bem-estar.",
     rota: "/qualidade-de-vida",
-    img: "/icons/meditation-3d.png",
+    img: qualidade,
   },
 ];
 

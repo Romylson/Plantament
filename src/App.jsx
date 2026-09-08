@@ -46,7 +46,7 @@ import SequenciaDoenca from "./pages/SequenciaDoenca";
 function App() {
   return (
     <div className="min-h-screen flex flex-col">
-      <AppHeader />
+      {/*<AppHeader />*/}
       
       <main className="flex-1">
           <Outlet />

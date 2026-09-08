@@ -6,6 +6,7 @@ import NoticiasAvancosAlzheimer from "../components/NoticiasAvancosAlzheimer";
 import BannerDiferenciais from "../components/BannerDiferenciais";
 import DiferenciaisInovadores from "../components/DiferenciaisInovadores";
 import IntroBlock from "../components/IntroBlock";
+import logosParceiros from "../assets/parceiros-rodapé.png";
 
 // Mapeamento dos 6 cards principais da tela
 const cardsPrincipais = [
@@ -321,7 +322,7 @@ export default function Dashboard() {
 
           {/* 👇 Imagem única com todas as marcas juntas */}
           <div className="footer-partners">
-            <img src="/images/parceiros-rodapé.png" alt="Apoiadores: UFPI, PPGFarm, NPPM, LAFAC-UFPI" />
+            <img src={logosParceiros} alt="Apoiadores: UFPI, PPGFarm, NPPM, LAFAC-UFPI" />
           </div>
         </div>
       </footer>

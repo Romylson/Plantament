@@ -9,6 +9,7 @@ import IntroBlock from "../components/IntroBlock";
 import logosParceiros from "../assets/parceiros-rodapé.png";
 import cerebroplanta from "../assets/cerebroplanta.png";
 import logoPlantamente from "../assets/plantamente.jpg";
+import cerebroRoxo from "../assets/cerebroroxo.jpg"
 
 // Mapeamento dos 6 cards principais da tela
 const cardsPrincipais = [
@@ -16,7 +17,7 @@ const cardsPrincipais = [
     titulo: "Entenda o Alzheimer",
     descricao: "Causas, sintomas, estágios e avanços na pesquisa.",
     rota: "/alzheimer-dados",
-    img: "/icons/brain-3d.png",
+    img: {cerebroRoxo},
   },
   {
     titulo: "Explore a Farmacologia",

@@ -321,7 +321,7 @@ export default function Dashboard() {
 
           {/* 👇 Imagem única com todas as marcas juntas */}
           <div className="footer-partners">
-            <img src="/logos/parceiros-rodapé.png" alt="Apoiadores: UFPI, PPGFarm, NPPM, LAFAC-UFPI" />
+            <img src="/images/parceiros-rodapé.png" alt="Apoiadores: UFPI, PPGFarm, NPPM, LAFAC-UFPI" />
           </div>
         </div>
       </footer>

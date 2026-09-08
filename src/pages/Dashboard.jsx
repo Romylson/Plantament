@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Dashboard.css";
+import ImageCarousel from "../components/ImageCarousel";
+import NoticiasAvancosAlzheimer from "../components/NoticiasAvancosAlzheimer";
+import BannerDiferenciais from "../components/BannerDiferenciais";
+import DiferenciaisInovadores from "../components/DiferenciaisInovadores";
+import IntroBlock from "../components/IntroBlock";
 
 // Mapeamento dos 6 cards principais da tela
 const cardsPrincipais = [

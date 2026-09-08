@@ -51,7 +51,7 @@ function App() {
       <main className="flex-1">
           {/*<Outlet />*/}
     <Router>
-      <Navbar />
+      {/*<Navbar />*/}
       <div className="p-4">
         <BackHomeButton />
         <Routes>
@@ -95,7 +95,7 @@ function App() {
       
     </Router>
     </main>
-      <Footer />
+      {/*<Footer />*/}
     </div>
   );
 }

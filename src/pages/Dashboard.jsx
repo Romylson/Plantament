@@ -67,7 +67,6 @@ export default function Dashboard() {
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchTerm.trim()) {
-      // Lógica de navegação ou busca
       console.log("Buscando por:", searchTerm);
     }
   };
@@ -86,15 +85,12 @@ export default function Dashboard() {
       <header className="site-header">
         <div className="header-container">
           <div className="logo-brand">
-            <Link to="/">
-            {/* Imagem da logo ao lado */}
-            <img src={logoPlantamente} alt="Logo PlantaMente" className="header-logo-img" />
-    
-            {/* Bloco do texto do título e subtítulo */}
-            <div className="brand-text">
-              <span className="logo-title">Plantamente<small>.org</small></span>
-              <span className="logo-subtitle">PLANTAS • CIÊNCIA • CÉREBRO</span>
-            </div>
+            <Link to="/" className="brand-link">
+              <img src={logoPlantamente} alt="Logo PlantaMente" className="header-logo-img" />
+              <div className="brand-text">
+                <span className="logo-title">Plantamente<small>.org</small></span>
+                <span className="logo-subtitle">PLANTAS • CIÊNCIA • CÉREBRO</span>
+              </div>
             </Link>
           </div>
 
@@ -186,9 +182,6 @@ export default function Dashboard() {
           </div>
         </div>
       </section>
-      {/* ========================================================= */}
-      {/* 📍 AQUI É O ESPAÇO DENTRO DO JSX (ANTES DA FAIXA ROXA)    */}
-      {/* ========================================================= */}
 
       {/* Carrossel de Imagens */}
       <div className="full-bleed-carousel">
@@ -204,8 +197,6 @@ export default function Dashboard() {
 
       {/* Diferenciais Inovadores */}
       <DiferenciaisInovadores />
-
-      {/* ========================================================= */}
 
       {/* 4. Faixa de Pilares e Valores */}
       <section className="pillars-bar">
@@ -237,27 +228,26 @@ export default function Dashboard() {
       </section>
 
       {/* 5. Seção Interativa + Destaques + Newsletter */}
-      {/* Seção Explore o Cérebro */}
-        <section className="explore-brain-section">
-          <div className="explore-brain-container">
-            {/* Lado Esquerdo: Texto e Botão */}
+      <section className="interactive-highlights-section">
+        <div className="interactive-container">
+          {/* Módulo Explore o Cérebro */}
+          <div className="explore-brain-card">
             <div className="explore-brain-info">
               <h2>Explore o Cérebro</h2>
               <p>Clique nas regiões para conhecer suas funções e relação com o Alzheimer.</p>
               <Link to="/anatomia-interativa" className="btn-primary">
-                Ver anatomia interativa →
+                Ver anatomia interativa &rarr;
               </Link>
             </div>
 
-            {/* Lado Direito: Imagem Única das Regiões do Cérebro */}
             <div className="explore-brain-media">
               <img 
                 src={cerebroRegioesImg} 
-                alt="Regiões do Cérebro: Córtex pré-frontal, Hipocampo, Amígdala, Cerebelo" 
+                alt="Regiões do Cérebro" 
               />
             </div>
           </div>
-        </section>
+
           {/* Módulo Destaques */}
           <div className="highlights-card">
             <div className="highlights-header">
@@ -338,7 +328,6 @@ export default function Dashboard() {
             <Link to="/contato">Contato</Link>
           </div>
 
-          {/* 👇 Imagem única com todas as marcas juntas */}
           <div className="footer-partners">
             <img src={logosParceiros} alt="Apoiadores: UFPI, PPGFarm, NPPM, LAFAC-UFPI" />
           </div>

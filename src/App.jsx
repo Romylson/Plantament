@@ -49,7 +49,7 @@ function App() {
       {/*<AppHeader />*/}
       
       <main className="flex-1">
-          <Outlet />
+          {/*<Outlet />*/}
     <Router>
       <Navbar />
       <div className="p-4">

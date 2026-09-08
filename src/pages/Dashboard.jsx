@@ -8,6 +8,7 @@ import DiferenciaisInovadores from "../components/DiferenciaisInovadores";
 import IntroBlock from "../components/IntroBlock";
 import logosParceiros from "../assets/parceiros-rodapé.png";
 import cerebroplanta from "../assets/cerebroplanta.png";
+import logoPlantamente from "../assets/plantamente.jpg";
 
 // Mapeamento dos 6 cards principais da tela
 const cardsPrincipais = [
@@ -77,8 +78,14 @@ export default function Dashboard() {
         <div className="header-container">
           <div className="logo-brand">
             <Link to="/">
+            {/* Imagem da logo ao lado */}
+            <img src={logoPlantamente} alt="Logo PlantaMente" className="header-logo-img" />
+    
+            {/* Bloco do texto do título e subtítulo */}
+            <div className="brand-text">
               <span className="logo-title">Plantamente<small>.org</small></span>
               <span className="logo-subtitle">PLANTAS • CIÊNCIA • CÉREBRO</span>
+            </div>
             </Link>
           </div>
 

@@ -647,7 +647,7 @@ a {
 
 .footer-partners img {
   height: auto;
-  max-height: 120px; /* Ajuste a altura máxima para alinhar proporcionalmente ao texto */
+  max-height: 150px; /* Ajuste a altura máxima para alinhar proporcionalmente ao texto */
   max-width: 100%;
   object-fit: contain;
   display: block;

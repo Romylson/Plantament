@@ -59,7 +59,7 @@ a {
 
 /* Estilo da imagem da logo ao lado */
 .header-logo-img {
-  height: px; /* Ajuste a altura da logo conforme a necessidade */
+  height: 60px; /* Ajuste a altura da logo conforme a necessidade */
   width: auto;
   object-fit: contain;
   border-radius: 6px; /* Opcional: para suavizar cantos se for quadrada */

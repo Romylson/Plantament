@@ -228,9 +228,8 @@ export default function Dashboard() {
       </section>
 
       {/* 5. Seção Interativa + Destaques + Newsletter */}
-      <section className="interactive-highlights-section">
-        <div className="interactive-container">
-          {/* Módulo Explore o Cérebro */}
+        <section className="interactive-highlights-section">
+          {/* Módulo 1: Explore o Cérebro (ocupa a linha inteira de cima) */}
           <div className="explore-brain-card">
             <div className="explore-brain-info">
               <h2>Explore o Cérebro</h2>
@@ -248,70 +247,69 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Módulo Destaques */}
-          <div className="highlights-card">
-            <div className="highlights-header">
-              <h2>Destaques</h2>
-              <div className="carousel-nav">
-                <button aria-label="Anterior">&lt;</button>
-                <button aria-label="Próximo">&gt;</button>
-              </div>
-            </div>
-
-            <div className="highlights-content">
-              <div className="highlight-item">
-                <img src={rosmarinus} alt="Rosmarinus officinalis" />
-                <div className="highlight-info">
-                  <span className="badge plant">PLANTA EM FOCO</span>
-                  <h3>Rosmarinus officinalis</h3>
-                  <p>Memória, antioxidante e neuroproteção.</p>
-                  <Link to="/plantas">Saiba mais &rarr;</Link>
+          {/* Container em Grid para alinhar Destaques e Newsletter lado a lado embaixo */}
+          <div className="interactive-container">
+            {/* Módulo 2: Destaques */}
+            <div className="highlights-card">
+              <div className="highlights-header">
+                <h2>Destaques</h2>
+                <div className="carousel-nav">
+                  <button aria-label="Anterior">&lt;</button>
+                  <button aria-label="Próximo">&gt;</button>
                 </div>
               </div>
 
-              <div className="highlight-item">
-                <div className="molecule-preview">
+              <div className="highlights-content">
+                <div className="highlight-item">
+                  <img src={rosmarinus} alt="Rosmarinus officinalis" />
+                  <div className="highlight-info">
+                    <span className="badge plant">PLANTA EM FOCO</span>
+                    <h3>Rosmarinus officinalis</h3>
+                    <p>Memória, antioxidante e neuroproteção.</p>
+                    <Link to="/plantas">Saiba mais &rarr;</Link>
+                  </div>
+                </div>
+
+                <div className="highlight-item">
                   <img src={terpineno} alt="γ-Terpineno" />
+                  <div className="highlight-info">
+                    <span className="badge molecule">MOLÉCULA EM FOCO</span>
+                    <h3>γ-Terpineno</h3>
+                    <p>Propriedades e alvos investigados.</p>
+                    <Link to="/moleculas">Saiba mais &rarr;</Link>
+                  </div>
                 </div>
-                <div className="highlight-info">
-                  <span className="badge molecule">MOLÉCULA EM FOCO</span>
-                  <h3>γ-Terpineno</h3>
-                  <p>Propriedades e alvos investigados.</p>
-                  <Link to="/moleculas">Saiba mais &rarr;</Link>
+              </div>
+            </div>
+
+            {/* Módulo 3: Newsletter */}
+            <div className="newsletter-card">
+              <h2>Receba novidades do Plantamente</h2>
+              <p>Artigos, atualizações e novos conteúdos.</p>
+
+              <form onSubmit={handleNewsletter} className="newsletter-form">
+                <input
+                  type="email"
+                  placeholder="Seu e-mail"
+                  value={newsletterEmail}
+                  onChange={(e) => setNewsletterEmail(e.target.value)}
+                  required
+                />
+                <button type="submit">&gt;</button>
+              </form>
+
+              <div className="social-links-block">
+                <p>Siga-nos</p>
+                <div className="social-icons">
+                  <a href="#instagram" aria-label="Instagram">📷</a>
+                  <a href="#youtube" aria-label="YouTube">▶️</a>
+                  <a href="#linkedin" aria-label="LinkedIn">in</a>
+                  <a href="#x" aria-label="X">𝕏</a>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Módulo Newsletter e Redes */}
-          <div className="newsletter-card">
-            <h2>Receba novidades do Plantamente</h2>
-            <p>Artigos, atualizações e novos conteúdos.</p>
-
-            <form onSubmit={handleNewsletter} className="newsletter-form">
-              <input
-                type="email"
-                placeholder="Seu e-mail"
-                value={newsletterEmail}
-                onChange={(e) => setNewsletterEmail(e.target.value)}
-                required
-              />
-              <button type="submit">&gt;</button>
-            </form>
-
-            <div className="social-links-block">
-              <p>Siga-nos</p>
-              <div className="social-icons">
-                <a href="#instagram" aria-label="Instagram">📷</a>
-                <a href="#youtube" aria-label="YouTube">▶️</a>
-                <a href="#linkedin" aria-label="LinkedIn">in</a>
-                <a href="#x" aria-label="X">𝕏</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+        </section>
       {/* 6. Rodapé Institucional */}
       <footer className="site-footer">
         <div className="footer-container">

@@ -30,7 +30,7 @@ const cardsPrincipais = [
   {
     titulo: "Moléculas em Destaque",
     descricao: "Estruturas, mecanismos e aplicações.",
-    rota: "/moleculas",
+    rota: "/fisiopatologia",
     img: "/icons/molecule-3d.png",
   },
   {
@@ -85,11 +85,11 @@ export default function Dashboard() {
             <Link to="/alzheimer-dados">Alzheimer</Link>
             <Link to="/farmacos">Farmacologia</Link>
             <Link to="/plantas">Plantas Medicinais</Link>
-            <Link to="/moleculas">Moléculas</Link>
+            <Link to="/fisiopatologia">Moléculas</Link>
             <Link to="/secao-cientifica">Evidências Científicas</Link>
             <Link to="/educacional">Aprender</Link>
             <Link to="/qualidade-de-vida">Qualidade de Vida</Link>
-            <Link to="/sobre">Sobre</Link>
+            <Link to="/historico">Sobre</Link>
           </nav>
 
           <div className="header-actions">
@@ -127,7 +127,7 @@ export default function Dashboard() {
               <Link to="/secao-cientifica" className="btn btn-primary">
                 Explorar conteúdos &rarr;
               </Link>
-              <Link to="/sobre" className="btn btn-outline">
+              <Link to="/historico" className="btn btn-outline">
                 Conheça o projeto
               </Link>
             </div>
@@ -319,11 +319,9 @@ export default function Dashboard() {
             <Link to="/contato">Contato</Link>
           </div>
 
+          {/* 👇 Imagem única com todas as marcas juntas */}
           <div className="footer-partners">
-            <img src="/logos/ufpi.png" alt="UFPI" />
-            <img src="/logos/ppgfarm.png" alt="PPGFarm" />
-            <img src="/logos/nppm.png" alt="NPPM" />
-            <img src="/logos/lafac.png" alt="LAFAC-UFPI" />
+            <img src="/logos/parceiros-rodapé.png" alt="Apoiadores: UFPI, PPGFarm, NPPM, LAFAC-UFPI" />
           </div>
         </div>
       </footer>

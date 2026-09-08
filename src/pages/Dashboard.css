@@ -646,10 +646,11 @@ a {
 }
 
 .footer-partners img {
-  height: 32px;
+  height: auto;
+  max-height: 42px; /* Ajuste a altura máxima para alinhar proporcionalmente ao texto */
+  max-width: 100%;
   object-fit: contain;
-  filter: brightness(0) invert(1);
-  opacity: 0.85;
+  display: block;
 }
 
 /* ==========================================================================

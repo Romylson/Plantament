@@ -412,12 +412,12 @@ a {
 .explore-brain-card {
   background-color: #f8f6fc;
   border-radius: 16px;
-  padding: 2.5rem;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
-  margin-bottom: 2rem;
+  gap: 1rem;
+  margin-bottom: 0;
 }
 
 .explore-brain-info {
@@ -439,6 +439,10 @@ a {
   margin-bottom: 1.5rem;
 }
 
+.explore-brain-info .btn-primary {
+  display: inline-block;
+  white-space: nowrap;
+}
 .explore-brain-media {
   flex: 1;
   display: flex;
@@ -449,15 +453,16 @@ a {
 /* Controle de tamanho da imagem do cérebro */
 .explore-brain-media img {
   width: 100%;
-  max-width: 480px;
+  max-width: 260px;
   height: auto;
   object-fit: contain;
+  mix-blend-mode: multiply;
 }
 
 /* 2. Container em Grid para Destaques (2/3) + Newsletter (1/3) */
 .interactive-container {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.2fr 1fr;;
   gap: 1.5rem;
 }
 

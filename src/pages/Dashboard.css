@@ -59,7 +59,7 @@ a {
 
 /* Estilo da imagem da logo ao lado */
 .header-logo-img {
-  height: 60px; /* Ajuste a altura da logo conforme a necessidade */
+  height: px; /* Ajuste a altura da logo conforme a necessidade */
   width: auto;
   object-fit: contain;
   border-radius: 6px; /* Opcional: para suavizar cantos se for quadrada */
@@ -400,76 +400,68 @@ a {
 }
 
 /* ==========================================================================
-   5. SEÇÕES INFERIORES (CÉREBRO, DESTAQUES, NEWSLETTER)
+   5.SEÇÃO: EXPLORE O CÉREBRO (Imagem Única)
    ========================================================================== */
-.interactive-highlights-section {
-  max-width: 1350px;
-  margin: 0 auto 3rem;
-  padding: 0 2rem;
-}
 
-.grid-3-cols {
-  display: grid;
-  grid-template-columns: 1.1fr 1.1fr 0.8fr;
-  gap: 1.5rem;
-}
-
-/* Card Interativo do Cérebro */
-.interactive-brain-card {
-  background: #ffffff;
+.explore-brain-section {
+  background-color: #f8f6fc;
+  padding: 3rem 2rem;
   border-radius: 16px;
-  padding: 1.5rem;
-  border: 1px solid #eee;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.explore-brain-container {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
-.interactive-brain-card h2 {
+.explore-brain-info {
+  flex: 1;
+  max-width: 400px;
+}
+
+.explore-brain-info h2 {
   font-family: 'Georgia', serif;
-  font-size: 1.4rem;
-  color: #1e0933;
-}
-
-.interactive-brain-card p {
-  font-size: 0.8rem;
-  color: #666;
-  margin-bottom: 1rem;
-}
-
-.brain-interactive-wrapper {
-  position: relative;
-  margin: 0 auto 1.5rem;
-  width: 100%;
-  text-align: center;
-}
-
-.brain-interactive-wrapper img {
-  max-width: 260px;
-  width: 100%;
-}
-
-.tag-point {
-  position: absolute;
-  background: #ffffff;
-  border: 1px solid #31114b;
+  font-size: 2rem;
   color: #31114b;
-  font-size: 0.65rem;
-  font-weight: 600;
-  padding: 0.15rem 0.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.8rem;
 }
 
-.tag-point.pre-frontal { top: 15%; left: 10%; }
-.tag-point.hipocampo { top: 55%; left: 15%; }
-.tag-point.amigdala { top: 68%; left: 25%; }
-.tag-point.cerebelo { bottom: 5%; right: 15%; }
+.explore-brain-info p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
 
-.full-width {
+.explore-brain-media {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explore-brain-media img {
   width: 100%;
-  margin-top: auto;
+  max-width: 550px;
+  height: auto;
+  object-fit: contain;
 }
 
+/* Adaptabilidade para celular */
+@media (max-width: 768px) {
+  .explore-brain-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .explore-brain-info {
+    max-width: 100%;
+  }
+}
 /* Card Destaques */
 .highlights-card {
   background: #ffffff;

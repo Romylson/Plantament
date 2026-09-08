@@ -16,6 +16,8 @@ import farmacoroxo from "../assets/farmacoroxo.jfif";
 import aprenda from "../assets/aprenda.jpg";
 import qualidade from "../assets/qualidade.jfif";
 import rosmarinus from "../assets/rosmarinus.jpg";
+import terpineno from "../assets/terpineno.png";
+import cerebroRegioesImg from "../assets/regioescerebro.jfif";
 
 // Mapeamento dos 6 cards principais da tela
 const cardsPrincipais = [
@@ -235,26 +237,27 @@ export default function Dashboard() {
       </section>
 
       {/* 5. Seção Interativa + Destaques + Newsletter */}
-      <section className="interactive-highlights-section">
-        <div className="section-container grid-3-cols">
-          {/* Módulo Explore o Cérebro */}
-          <div className="interactive-brain-card">
-            <h2>Explore o Cérebro</h2>
-            <p>Clique nas regiões para conhecer suas funções e relação com o Alzheimer.</p>
-            
-            <div className="brain-interactive-wrapper">
-              <img src="/images/brain-regions.png" alt="Anatomia do Cérebro" />
-              <span className="tag-point pre-frontal">Córtex pré-frontal</span>
-              <span className="tag-point hipocampo">Hipocampo</span>
-              <span className="tag-point amigdala">Amígdala</span>
-              <span className="tag-point cerebelo">Cerebelo</span>
+      {/* Seção Explore o Cérebro */}
+        <section className="explore-brain-section">
+          <div className="explore-brain-container">
+            {/* Lado Esquerdo: Texto e Botão */}
+            <div className="explore-brain-info">
+              <h2>Explore o Cérebro</h2>
+              <p>Clique nas regiões para conhecer suas funções e relação com o Alzheimer.</p>
+              <Link to="/anatomia-interativa" className="btn-primary">
+                Ver anatomia interativa →
+              </Link>
             </div>
 
-            <Link to="/cerebro3d" className="btn btn-primary full-width">
-              Ver anatomia interativa &rarr;
-            </Link>
+            {/* Lado Direito: Imagem Única das Regiões do Cérebro */}
+            <div className="explore-brain-media">
+              <img 
+                src={cerebroRegioesImg} 
+                alt="Regiões do Cérebro: Córtex pré-frontal, Hipocampo, Amígdala, Cerebelo" 
+              />
+            </div>
           </div>
-
+        </section>
           {/* Módulo Destaques */}
           <div className="highlights-card">
             <div className="highlights-header">
@@ -278,7 +281,7 @@ export default function Dashboard() {
 
               <div className="highlight-item">
                 <div className="molecule-preview">
-                  <img src="/images/y-terpineno.png" alt="γ-Terpineno" />
+                  <img src={terpineno} alt="γ-Terpineno" />
                 </div>
                 <div className="highlight-info">
                   <span className="badge molecule">MOLÉCULA EM FOCO</span>

@@ -1,133 +1,327 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Dashboard.css";
-import ImageCarousel from "../components/ImageCarousel";
-import NoticiasAvancosAlzheimer from "../components/NoticiasAvancosAlzheimer";
-import BannerDiferenciais from "../components/BannerDiferenciais";
-import DiferenciaisInovadores from "../components/DiferenciaisInovadores";
-import IntroBlock from "../components/IntroBlock";
 
-const secoesHome = [
+// Mapeamento dos 6 cards principais da tela
+const cardsPrincipais = [
   {
-    titulo: "Alzheimer em Dados",
-    descricao: "Entenda definição, prevalência, mecanismos e progressão da doença.",
+    titulo: "Entenda o Alzheimer",
+    descricao: "Causas, sintomas, estágios e avanços na pesquisa.",
     rota: "/alzheimer-dados",
-    img: "/icons/brain.png",
+    img: "/icons/brain-3d.png",
   },
   {
-    titulo: "Plantas em Evidência",
-    descricao: "Acesse plantas com mecanismos de ação e nível de evidência.",
+    titulo: "Explore a Farmacologia",
+    descricao: "Alvos moleculares, fármacos e compostos naturais.",
+    rota: "/farmacos",
+    img: "/icons/pharma-3d.png",
+  },
+  {
+    titulo: "Descubra as Plantas Medicinais",
+    descricao: "Espécies, compostos bioativos e evidências no Alzheimer.",
     rota: "/plantas",
-    img: "/icons/plant.png",
+    img: "/icons/plant-3d.png",
   },
   {
-    titulo: "Seção Científica",
-    descricao: "Biblioteca organizada e banco de estudos pesquisável.",
-    rota: "/secao-cientifica",
-    img: "/icons/science.png",
+    titulo: "Moléculas em Destaque",
+    descricao: "Estruturas, mecanismos e aplicações.",
+    rota: "/moleculas",
+    img: "/icons/molecule-3d.png",
   },
   {
-    titulo: "Qualidade de Vida e Prevenção",
-    descricao: "Leve ciência para a prática com recomendações e autoavaliação.",
-    rota: "/qualidade-de-vida",
-    img: "/icons/health.png",
-  },
-  {
-    titulo: "Seção Educacional",
-    descricao: "Materiais didáticos, mapas mentais, PDFs e quizzes por nível.",
+    titulo: "Aprenda",
+    descricao: "Mapas mentais, fluxogramas, linha do tempo, quiz e mais.",
     rota: "/educacional",
-    img: "/icons/education.png",
+    img: "/icons/books-3d.png",
   },
   {
-    titulo: "Blog Científico",
-    descricao: "Publicações quinzenais com evidência, aplicabilidade e limitações.",
-    rota: "/blog-cientifico",
-    img: "/icons/blog.png",
+    titulo: "Qualidade de Vida",
+    descricao: "Exercício, dieta, sono, natureza e bem-estar.",
+    rota: "/qualidade-de-vida",
+    img: "/icons/meditation-3d.png",
   },
-  {
-    titulo: "Diferenciais Inovadores",
-    descricao: "Planta da semana, simulador de mecanismos e área para pesquisadores.",
-    rota: "/diferenciais-inovadores",
-    img: "/icons/innovation.png",
-  },
-];
-
-const linksLegados = [
-  { titulo: "Fisiopatologia", rota: "/fisiopatologia" },
-  { titulo: "Plantas", rota: "/plantas" },
-  { titulo: "Fármacos", rota: "/farmacos" },
-  { titulo: "Jogos", rota: "/jogos" },
-  { titulo: "Cérebro 3D", rota: "/cerebro3d" },
-  { titulo: "Artigos Científicos", rota: "/artigos-cientificos" },
 ];
 
 export default function Dashboard() {
   const location = useLocation();
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchTerm.trim()) {
+      // Lógica de navegação ou busca
+      console.log("Buscando por:", searchTerm);
+    }
+  };
+
+  const handleNewsletter = (e) => {
+    e.preventDefault();
+    if (newsletterEmail.trim()) {
+      alert("Obrigado por se inscrever!");
+      setNewsletterEmail("");
+    }
+  };
 
   return (
-    <div className="dashboard-layout">
-      <button className="hamburger-button" onClick={() => setMenuOpen((prev) => !prev)} aria-label="Abrir menu">
-        ☰
-      </button>
+    <div className="plantamente-landing">
+      {/* 1. Header / Navbar Superior */}
+      <header className="site-header">
+        <div className="header-container">
+          <div className="logo-brand">
+            <Link to="/">
+              <span className="logo-title">Plantamente<small>.org</small></span>
+              <span className="logo-subtitle">PLANTAS • CIÊNCIA • CÉREBRO</span>
+            </Link>
+          </div>
 
-      <aside className={`dashboard-sidebar ${menuOpen ? "open" : ""}`}>
-        <img src="/images/plantamente.jpg" alt="PlantaMente" className="logo" />
-        <h2 className="sidebar-title">PlantaMente</h2>
-        <nav>
-          <ul>
-            <li><Link className={location.pathname === "/" || location.pathname === "/dashboard" ? "active" : ""} to="/">Início</Link></li>
-            {linksLegados.map((link) => (
-              <li key={link.rota}>
-                <Link className={location.pathname === link.rota ? "active" : ""} to={link.rota}>{link.titulo}</Link>
-              </li>
+          <nav className="main-nav">
+            <Link to="/" className={location.pathname === "/" ? "active" : ""}>Início</Link>
+            <Link to="/alzheimer-dados">Alzheimer</Link>
+            <Link to="/farmacos">Farmacologia</Link>
+            <Link to="/plantas">Plantas Medicinais</Link>
+            <Link to="/moleculas">Moléculas</Link>
+            <Link to="/secao-cientifica">Evidências Científicas</Link>
+            <Link to="/educacional">Aprender</Link>
+            <Link to="/qualidade-de-vida">Qualidade de Vida</Link>
+            <Link to="/sobre">Sobre</Link>
+          </nav>
+
+          <div className="header-actions">
+            <form onSubmit={handleSearch} className="search-box">
+              <input
+                type="text"
+                placeholder="Buscar..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+              <button type="submit" aria-label="Buscar">🔍</button>
+            </form>
+            <button className="accessibility-btn">
+              ♿ Acessibilidade
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* 2. Hero Section */}
+      <section className="hero-section">
+        <div className="hero-container">
+          <div className="hero-content">
+            <span className="hero-tagline">CIÊNCIA HOJE, MAIS MEMÓRIAS AMANHÃ</span>
+            <h1 className="hero-title">
+              Plantamente<br />
+              <span>Alzheimer, Plantas e Ciência</span>
+            </h1>
+            <p className="hero-description">
+              Uma plataforma digital que conecta neurociência, farmacologia
+              e plantas medicinais para informar, educar e inspirar uma vida
+              com mais saúde cerebral.
+            </p>
+            <div className="hero-buttons">
+              <Link to="/secao-cientifica" className="btn btn-primary">
+                Explorar conteúdos &rarr;
+              </Link>
+              <Link to="/sobre" className="btn btn-outline">
+                Conheça o projeto
+              </Link>
+            </div>
+          </div>
+
+          <div className="hero-illustration">
+            <img src="/images/hero-brain-plants.png" alt="Cérebro e Plantas Medicinais" />
+          </div>
+
+          <div className="hero-slogan-card">
+            <p className="handwritten-text">Plantas hoje, mentes amanhã.</p>
+            <ul className="slogan-list">
+              <li><span className="icon">🧠</span> NEUROPROTEÇÃO</li>
+              <li><span className="icon">🌿</span> PLANTAS MEDICINAIS</li>
+              <li><span className="icon">📖</span> EVIDÊNCIAS CIENTÍFICAS</li>
+              <li><span className="icon">💜</span> QUALIDADE DE VIDA</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Grid de Categorias (6 Cards) */}
+      <section className="categories-section">
+        <div className="section-container">
+          <div className="cards-grid">
+            {cardsPrincipais.map((card) => (
+              <div key={card.rota} className="feature-card">
+                <div className="card-media">
+                  <img src={card.img} alt={card.titulo} />
+                </div>
+                <h3>{card.titulo}</h3>
+                <p>{card.descricao}</p>
+                <Link to={card.rota} className="card-arrow-btn" aria-label={`Acessar ${card.titulo}`}>
+                  &gt;
+                </Link>
+              </div>
             ))}
-            {secoesHome.filter((secao) => !linksLegados.some((link) => link.rota === secao.rota)).map((secao) => (
-              <li key={secao.rota}>
-                <Link className={location.pathname === secao.rota ? "active" : ""} to={secao.rota}>{secao.titulo}</Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </aside>
-        {/* 👇 carrossel full width abaixo da navbar branca */}
+          </div>
+        </div>
+      </section>
+      {/* ========================================================= */}
+      {/* 📍 AQUI É O ESPAÇO DENTRO DO JSX (ANTES DA FAIXA ROXA)    */}
+      {/* ========================================================= */}
+
+      {/* Carrossel de Imagens */}
       <div className="full-bleed-carousel">
-          <ImageCarousel />
+        <ImageCarousel />
       </div>
 
-      <main className="dashboard-main">
-        <section className="hero-banner">
-          <p className="hero-tag">Conectando Ciência, Natureza e Saúde Cerebral</p>
-          <p>Escolha abaixo a área que você deseja explorar.</p>
-          <div className="hero-actions">
-            <Link to="/secao-cientifica" className="hero-btn primary">Explorar Evidências Científicas</Link>
-            <Link to="/plantas" className="hero-btn">Conhecer as Plantas</Link>
-            <Link to="/qualidade-de-vida" className="hero-btn">Melhorar Minha Saúde Cerebral</Link>
-          </div>
-        </section>
+      {/* Banner de Diferenciais e Introdução */}
+      <BannerDiferenciais />
+      <IntroBlock />
 
-        <section className="section-block">
-          <h2>Páginas do portal</h2>
-          <div className="cards-grid">
-            {secoesHome.map((secao) => (
-              <article key={secao.rota} className="info-card interactive">
-                <div className="card-icon-img">
-                  <img src={secao.img} alt={secao.titulo} />
+      {/* Notícias de Avanços no Alzheimer */}
+      <NoticiasAvancosAlzheimer />
+
+      {/* Diferenciais Inovadores */}
+      <DiferenciaisInovadores />
+
+      {/* ========================================================= */}
+
+      {/* 4. Faixa de Pilares e Valores */}
+      <section className="pillars-bar">
+        <div className="pillars-container">
+          <div className="pillar-item">
+            <span className="pillar-icon">📋</span>
+            <span className="pillar-text">CONTEÚDO BASEADO EM EVIDÊNCIAS</span>
+          </div>
+          <div className="pillar-item">
+            <span className="pillar-icon">🎯</span>
+            <span className="pillar-text">LINGUAGEM ACESSÍVEL</span>
+          </div>
+          <div className="pillar-item">
+            <span className="pillar-icon">👥</span>
+            <span className="pillar-text">INFORMAÇÃO PARA TODOS</span>
+          </div>
+          <div className="pillar-item">
+            <span className="pillar-icon">🌿</span>
+            <span className="pillar-text">PLANTAS A FAVOR DO CÉREBRO</span>
+          </div>
+          <div className="pillar-item">
+            <span className="pillar-icon">💜</span>
+            <span className="pillar-text">MAIS QUALIDADE DE VIDA</span>
+          </div>
+          <div className="pillar-quote">
+            “Conhecimento é uma semente que nunca se perde.”
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Seção Interativa + Destaques + Newsletter */}
+      <section className="interactive-highlights-section">
+        <div className="section-container grid-3-cols">
+          {/* Módulo Explore o Cérebro */}
+          <div className="interactive-brain-card">
+            <h2>Explore o Cérebro</h2>
+            <p>Clique nas regiões para conhecer suas funções e relação com o Alzheimer.</p>
+            
+            <div className="brain-interactive-wrapper">
+              <img src="/images/brain-regions.png" alt="Anatomia do Cérebro" />
+              <span className="tag-point pre-frontal">Córtex pré-frontal</span>
+              <span className="tag-point hipocampo">Hipocampo</span>
+              <span className="tag-point amigdala">Amígdala</span>
+              <span className="tag-point cerebelo">Cerebelo</span>
+            </div>
+
+            <Link to="/cerebro3d" className="btn btn-primary full-width">
+              Ver anatomia interativa &rarr;
+            </Link>
+          </div>
+
+          {/* Módulo Destaques */}
+          <div className="highlights-card">
+            <div className="highlights-header">
+              <h2>Destaques</h2>
+              <div className="carousel-nav">
+                <button aria-label="Anterior">&lt;</button>
+                <button aria-label="Próximo">&gt;</button>
+              </div>
+            </div>
+
+            <div className="highlights-content">
+              <div className="highlight-item">
+                <img src="/images/rosmarinus.png" alt="Rosmarinus officinalis" />
+                <div className="highlight-info">
+                  <span className="badge plant">PLANTA EM FOCO</span>
+                  <h3>Rosmarinus officinalis</h3>
+                  <p>Memória, antioxidante e neuroproteção.</p>
+                  <Link to="/plantas">Saiba mais &rarr;</Link>
                 </div>
-                <h3>{secao.titulo}</h3>
-                <p>{secao.descricao}</p>
-                <Link className="inline-link" to={secao.rota}>Abrir página</Link>
-              </article>
-            ))}
-          </div>
-        </section>
+              </div>
 
-        <BannerDiferenciais />
-        
-        <IntroBlock />
-        <NoticiasAvancosAlzheimer />
-        <DiferenciaisInovadores />
-      </main>
+              <div className="highlight-item">
+                <div className="molecule-preview">
+                  <img src="/images/y-terpineno.png" alt="γ-Terpineno" />
+                </div>
+                <div className="highlight-info">
+                  <span className="badge molecule">MOLÉCULA EM FOCO</span>
+                  <h3>γ-Terpineno</h3>
+                  <p>Propriedades e alvos investigados.</p>
+                  <Link to="/moleculas">Saiba mais &rarr;</Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Módulo Newsletter e Redes */}
+          <div className="newsletter-card">
+            <h2>Receba novidades do Plantamente</h2>
+            <p>Artigos, atualizações e novos conteúdos.</p>
+
+            <form onSubmit={handleNewsletter} className="newsletter-form">
+              <input
+                type="email"
+                placeholder="Seu e-mail"
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
+                required
+              />
+              <button type="submit">&gt;</button>
+            </form>
+
+            <div className="social-links-block">
+              <p>Siga-nos</p>
+              <div className="social-icons">
+                <a href="#instagram" aria-label="Instagram">📷</a>
+                <a href="#youtube" aria-label="YouTube">▶️</a>
+                <a href="#linkedin" aria-label="LinkedIn">in</a>
+                <a href="#x" aria-label="X">𝕏</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Rodapé Institucional */}
+      <footer className="site-footer">
+        <div className="footer-container">
+          <div className="footer-brand">
+            <span className="footer-title">Plantamente<small>.org</small></span>
+            <span className="footer-subtitle">PLANTAS • CIÊNCIA • CÉREBRO</span>
+          </div>
+
+          <div className="footer-links">
+            <Link to="/termos">Termos de uso</Link>
+            <span className="divider">|</span>
+            <Link to="/privacidade">Política de privacidade</Link>
+            <span className="divider">|</span>
+            <Link to="/contato">Contato</Link>
+          </div>
+
+          <div className="footer-partners">
+            <img src="/logos/ufpi.png" alt="UFPI" />
+            <img src="/logos/ppgfarm.png" alt="PPGFarm" />
+            <img src="/logos/nppm.png" alt="NPPM" />
+            <img src="/logos/lafac.png" alt="LAFAC-UFPI" />
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

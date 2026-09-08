@@ -15,6 +15,7 @@ import molecula from "../assets/molecula.jpg";
 import farmacoroxo from "../assets/farmacoroxo.jfif";
 import aprenda from "../assets/aprenda.jpg";
 import qualidade from "../assets/qualidade.jfif";
+import rosmarinus from "../assets/rosmarinus.jpg";
 
 // Mapeamento dos 6 cards principais da tela
 const cardsPrincipais = [
@@ -266,7 +267,7 @@ export default function Dashboard() {
 
             <div className="highlights-content">
               <div className="highlight-item">
-                <img src="/images/rosmarinus.png" alt="Rosmarinus officinalis" />
+                <img src={rosmarinus} alt="Rosmarinus officinalis" />
                 <div className="highlight-info">
                   <span className="badge plant">PLANTA EM FOCO</span>
                   <h3>Rosmarinus officinalis</h3>

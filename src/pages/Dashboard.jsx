@@ -11,6 +11,7 @@ import cerebroplanta from "../assets/cerebroplanta.png";
 import logoPlantamente from "../assets/plantamente.jpg";
 import cerebroroxo from "../assets/cerebroroxo.jpg";
 import plantamedicinal from "../assets/plantamedicinal.jpg";
+import molecula from "../assets/molecula.jfif";
 
 // Mapeamento dos 6 cards principais da tela
 const cardsPrincipais = [
@@ -36,7 +37,7 @@ const cardsPrincipais = [
     titulo: "Moléculas em Destaque",
     descricao: "Estruturas, mecanismos e aplicações.",
     rota: "/fisiopatologia",
-    img: "/icons/molecule-3d.png",
+    img: molecula,
   },
   {
     titulo: "Aprenda",

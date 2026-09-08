@@ -453,7 +453,7 @@ a {
 /* Controle de tamanho da imagem do cérebro */
 .explore-brain-media img {
   width: 100%;
-  max-width: 260px;
+  max-width: 180px;
   height: auto;
   object-fit: contain;
   mix-blend-mode: multiply;

@@ -11,7 +11,7 @@ import cerebroplanta from "../assets/cerebroplanta.png";
 import logoPlantamente from "../assets/plantamente.jpg";
 import cerebroroxo from "../assets/cerebroroxo.jpg";
 import plantamedicinal from "../assets/plantamedicinal.jpg";
-import molecula from "../assets/molecula.jpeg";
+import molecula from "../assets/molecula.jpg";
 import farmacoroxo from "../assets/farmacoroxo.jfif";
 import aprenda from "../assets/aprenda.jpg";
 import qualidade from "../assets/qualidade.jfif";

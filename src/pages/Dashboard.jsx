@@ -105,8 +105,6 @@ export default function Dashboard() {
             <Link to="/qualidade-de-vida">Qualidade de Vida</Link>
             <Link to="/jogos">Jogos</Link>
             <Link to="/artigos-cientificos">Artigos Científicos</Link>
-            <Link to="/blog-cientifico"> Blog Científico</Link>
-            <Link to="/diferenciais-inovadores">Diferenciais Inovadores</Link>
             <Link to="/historico">Sobre</Link>
           </nav>
 
@@ -231,64 +229,54 @@ export default function Dashboard() {
         </div>
       </section>
 
-      {/* 5. Seção Interativa + Destaques + Newsletter */}
+          {/* ==========================================================================
+        5. SEÇÃO DOS 4 BLOCOS LADO A LADO
+        ========================================================================== */}
           <section className="interactive-highlights-section">
-            <div className="interactive-container">
-              {/* Bloco 1: Explore o Cérebro */}
-              <div className="explore-brain-card">
-                <div className="explore-brain-info">
+            <div className="four-blocks-container">
+              
+              {/* BLOCO 1: EXPLORE O CÉREBRO */}
+              <div className="block-item explore-brain-card">
+                <div className="block-info">
                   <h2>Explore o Cérebro</h2>
                   <p>Clique nas regiões para conhecer suas funções e relação com o Alzheimer.</p>
                   <Link to="/anatomia-interativa" className="btn-primary">
                     Ver anatomia interativa &rarr;
                   </Link>
                 </div>
-
-                <div className="explore-brain-media">
-                  <img 
-                    src={cerebroRegioesImg} 
-                    alt="Regiões do Cérebro" 
-                  />
+                <div className="block-media">
+                  <img src={cerebroImg} alt="Cérebro" />
                 </div>
               </div>
 
-              {/* Bloco 2: Destaques */}
-              <div className="highlights-card">
-                <div className="highlights-header">
-                  <h2>Destaques</h2>
-                  <div className="carousel-nav">
-                    <button aria-label="Anterior">&lt;</button>
-                    <button aria-label="Próximo">&gt;</button>
-                  </div>
+              {/* BLOCO 2: PLANTA EM FOCO */}
+              <div className="block-item highlight-card">
+                <div className="block-media highlight-media">
+                  <img src={rosmarinus} alt="Rosmarinus officinalis" className="highlight-img" />
                 </div>
-
-                <div className="highlights-content">
-                  {/* Bloco 2A: Planta em Foco */}
-                  <div className="highlight-item">
-                    <img src={rosmarinus} alt="Rosmarinus officinalis" />
-                    <div className="highlight-info">
-                      <span className="badge plant">PLANTA EM FOCO</span>
-                      <h3>Rosmarinus officinalis</h3>
-                      <p>Memória, antioxidante e neuroproteção.</p>
-                      <Link to="/plantas">Saiba mais &rarr;</Link>
-                    </div>
-                  </div>
-
-                  {/* Bloco 2B: Molécula em Foco */}
-                  <div className="highlight-item">
-                    <img src={terpineno} alt="γ-Terpineno" />
-                    <div className="highlight-info">
-                      <span className="badge molecule">MOLÉCULA EM FOCO</span>
-                      <h3>γ-Terpineno</h3>
-                      <p>Propriedades e alvos investigados.</p>
-                      <Link to="/moleculas">Saiba mais &rarr;</Link>
-                    </div>
-                  </div>
+                <div className="block-info">
+                  <span className="badge plant">PLANTA EM FOCO</span>
+                  <h3>Rosmarinus officinalis</h3>
+                  <p>Memória, antioxidante e neuroproteção.</p>
+                  <Link to="/plantas" className="link-more">Saiba mais &rarr;</Link>
                 </div>
               </div>
 
-              {/* Bloco 3: Newsletter */}
-              <div className="newsletter-card">
+              {/* BLOCO 3: MOLÉCULA EM FOCO */}
+              <div className="block-item highlight-card">
+                <div className="block-media highlight-media">
+                  <img src={terpineno} alt="γ-Terpineno" className="highlight-img" />
+                </div>
+                <div className="block-info">
+                  <span className="badge molecule">MOLÉCULA EM FOCO</span>
+                  <h3>γ-Terpineno</h3>
+                  <p>Propriedades e alvos investigados.</p>
+                  <Link to="/moleculas" className="link-more">Saiba mais &rarr;</Link>
+                </div>
+              </div>
+
+              {/* BLOCO 4: NEWSLETTER */}
+              <div className="block-item newsletter-card">
                 <h2>Receba novidades do Plantamente</h2>
                 <p>Artigos, atualizações e novos conteúdos.</p>
 
@@ -313,6 +301,7 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
+
             </div>
           </section>
       {/* 6. Rodapé Institucional */}

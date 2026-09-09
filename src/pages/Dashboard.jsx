@@ -104,7 +104,6 @@ export default function Dashboard() {
             <Link to="/educacional">Aprender</Link>
             <Link to="/qualidade-de-vida">Qualidade de Vida</Link>
             <Link to="/jogos">Jogos</Link>
-            <Link to="/artigos-cientificos">Artigos Científicos</Link>
             <Link to="/historico">Sobre</Link>
           </nav>
 

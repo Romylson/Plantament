@@ -245,7 +245,7 @@ export default function Dashboard() {
                   </Link>
                 </div>
                 <div className="block-media">
-                  <img src={cerebroImg} alt="Cérebro" />
+                  <img src={cerebroRegioesImg} alt="Cérebro" />
                 </div>
               </div>
 

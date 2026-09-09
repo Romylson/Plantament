@@ -403,46 +403,63 @@ a {
    5. SEÇÃO: EXPLORE O CÉREBRO, DESTAQUES E NEWSLETTER
    ========================================================================== */
 .interactive-highlights-section {
-  max-width: 1200px;
+  max-width: 1350px;
   margin: 2rem auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 
-/* 1. Módulo "Explore o Cérebro" */
+/* Grid Principal: 2 Colunas de tamanhos iguais */
+.interactive-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* Coluna Esquerda: Cérebro em cima, Newsletter embaixo */
+.interactive-col-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* 1. Card Explore o Cérebro (Ajustado para proporção do bloco ao lado) */
 .explore-brain-card {
   background-color: #f8f6fc;
   border-radius: 16px;
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 0;
+  flex: 1; /* Ocupa metade da altura total da coluna */
 }
 
 .explore-brain-info {
   flex: 1;
-  max-width: 450px;
 }
 
 .explore-brain-info h2 {
   font-family: 'Georgia', serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #31114b;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .explore-brain-info p {
   color: #555;
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
 }
 
 .explore-brain-info .btn-primary {
   display: inline-block;
   white-space: nowrap;
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
 }
+
 .explore-brain-media {
   flex: 1;
   display: flex;
@@ -450,107 +467,14 @@ a {
   align-items: center;
 }
 
-/* Controle de tamanho da imagem do cérebro */
 .explore-brain-media img {
   width: 100%;
-  max-width: 180px;
+  max-width: 200px;
   height: auto;
   object-fit: contain;
-  mix-blend-mode: multiply;
 }
 
-/* 2. Container em Grid para Destaques (2/3) + Newsletter (1/3) */
-.interactive-container {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;;
-  gap: 1.5rem;
-}
-
-/* Card Destaques */
-.highlights-card {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 1.5rem;
-  border: 1px solid #eee;
-}
-
-.highlights-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.highlights-header h2 {
-  font-family: 'Georgia', serif;
-  font-size: 1.4rem;
-  color: #1e0933;
-}
-
-.carousel-nav button {
-  background: #f2e9fc;
-  border: none;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  color: #31114b;
-  cursor: pointer;
-  font-weight: bold;
-  margin-left: 0.3rem;
-}
-
-.highlights-content {
-  display: flex;
-  gap: 1rem;
-}
-
-.highlight-item {
-  flex: 1;
-  background: #faf7fd;
-  border-radius: 12px;
-  padding: 1rem;
-}
-
-.highlight-item img {
-  width: 100%;
-  height: 90px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
-}
-
-.badge {
-  font-size: 0.6rem;
-  font-weight: 800;
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
-  color: #fff;
-  display: inline-block;
-  margin-bottom: 0.4rem;
-}
-
-.badge.plant { background: #5c2092; }
-.badge.molecule { background: #31114b; }
-
-.highlight-info h3 {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: #1e0933;
-}
-
-.highlight-info p {
-  font-size: 0.72rem;
-  color: #666;
-  margin: 0.2rem 0 0.5rem;
-}
-
-.highlight-info a {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #31114b;
-}
-
-/* Card Newsletter */
+/* 2. Card Newsletter */
 .newsletter-card {
   background: #270c3e;
   color: #ffffff;
@@ -559,6 +483,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 1; /* Ocupa a outra metade da altura total */
 }
 
 .newsletter-card h2 {
@@ -578,7 +503,7 @@ a {
   background: #ffffff;
   border-radius: 20px;
   padding: 0.25rem 0.3rem 0.25rem 0.8rem;
-  margin: 1.2rem 0;
+  margin: 0.8rem 0;
 }
 
 .newsletter-form input {
@@ -600,21 +525,17 @@ a {
   font-weight: bold;
 }
 
-.social-links-block p {
-  font-size: 0.75rem;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-}
-
-.social-icons {
+/* Coluna Direita (Destaques) */
+.interactive-col-right {
   display: flex;
-  gap: 0.8rem;
+  flex-direction: column;
 }
 
-.social-icons a {
-  color: #ffffff;
-  font-size: 1.1rem;
-  opacity: 0.9;
+.interactive-col-right .highlights-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 /* ==========================================================================
    6. RODAPÉ INSTITUCIONAL (FOOTER)

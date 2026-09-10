@@ -14,6 +14,7 @@ const topicos = [
     titulo: "Exercício físico e BDNF",
     icone: "🏃",
     imagem: imgExercicio,
+    fonte: "Fonte: Freepik / Adobe Stock",
     base: [
       "A prática regular de exercício físico, especialmente aeróbico, está associada ao aumento do BDNF (Brain-Derived Neurotrophic Factor), proteína essencial para neuroplasticidade.",
       "O BDNF promove sobrevivência neuronal, formação de novas sinapses e melhora da memória e aprendizagem.",
@@ -41,6 +42,7 @@ const topicos = [
     titulo: "Dieta neuroprotetora (Mediterrânea e MIND)",
     icone: "🥗",
     imagem: imgDieta,
+    fonte: "Fonte: Freepik / Unsplash",
     base: [
       "A dieta Mediterrânea e o padrão MIND estão associados à redução do risco de Alzheimer e declínio cognitivo.",
       "Esses padrões são ricos em antioxidantes, ácidos graxos monoinsaturados e compostos anti-inflamatórios.",
@@ -69,6 +71,7 @@ const topicos = [
     titulo: "Sono e consolidação da memória",
     icone: "😴",
     imagem: imgSono,
+    fonte: "Fonte: Pixabay / Freepik",
     base: [
       "O sono é fundamental para a consolidação da memória e reorganização sináptica.",
       "Durante o sono profundo ocorre ativação do sistema glinfático, responsável pela remoção de metabólitos neurotóxicos.",
@@ -96,6 +99,7 @@ const topicos = [
     titulo: "Contato com a natureza e saúde cerebral",
     icone: "🌿",
     imagem: imgNatureza,
+    fonte: "Fonte: Unsplash / Freepik",
     base: [
       "A exposição a ambientes naturais está associada à redução do estresse e melhora da função cognitiva.",
       "Estudos indicam que ambientes verdes aumentam atenção sustentada e reduzem fadiga mental.",
@@ -197,7 +201,24 @@ export default function QualidadeVidaPage() {
             <h3>{tema.icone} {tema.titulo}</h3>
 
             <img src={tema.imagem} alt={tema.titulo} className="qualidade-img" />
-
+            {/* Tag com a fonte da imagem */}
+              {tema.fonte && (
+                <span
+                  style={{
+                    position: "absolute",
+                    bottom: "6px",
+                    right: "6px",
+                    backgroundColor: "rgba(0, 0, 0, 0.7)",
+                    color: "#ffffff",
+                    fontSize: "0.65rem",
+                    padding: "2px 6px",
+                    borderRadius: "4px",
+                    pointerEvents: "none"
+                  }}
+                >
+                  {tema.fonte}
+                </span>
+              )} 
             <ul>
               {tema.base.map((item) => (
                 <li key={item}>{item}</li>

@@ -49,11 +49,11 @@ export default function NoticiaDetalhe() {
           }}
         />
         {/* 👇 Exibe a fonte da imagem na notícia aberta */}
-        {noticia.fonte && (
+          {noticia.fonte && (
           <span className="text-xs text-gray-500 italic block mt-1">
             {noticia.fonte}
           </span>
-        
+          )}
       )}
 
       <div className="noticia-conteudo">

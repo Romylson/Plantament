@@ -27,13 +27,13 @@ export default function NoticiaCarousel() {
 
       {noticia.imagem && (
         <img className="noticia-capa" src={noticia.imagem} alt={noticia.titulo} />
-      )}
+      )} 
         {/* 👇 Exibe a fonte da imagem na notícia aberta */}
         {noticia.fonte && (
           <span className="text-xs text-gray-500 italic block mt-1">
             {noticia.fonte}
           </span>
-)}
+        )}
 
       <p className="noticia-resumo">{noticia.resumo}</p>
 

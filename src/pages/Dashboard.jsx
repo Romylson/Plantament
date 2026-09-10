@@ -239,7 +239,7 @@ export default function Dashboard() {
                 <div className="block-info">
                   <h2>Explore o Cérebro</h2>
                   <p>Clique nas regiões para conhecer suas funções e relação com o Alzheimer.</p>
-                  <Link to="/anatomia-interativa" className="btn-primary">
+                  <Link to="/cerebro3d" className="btn-primary">
                     Ver anatomia interativa &rarr;
                   </Link>
                 </div>
@@ -270,7 +270,7 @@ export default function Dashboard() {
                   <span className="badge molecule">MOLÉCULA EM FOCO</span>
                   <h3>γ-Terpineno</h3>
                   <p>Propriedades e alvos investigados.</p>
-                  <Link to="/moleculas" className="link-more">Saiba mais &rarr;</Link>
+                  <Link to="/fisiopatologia" className="link-more">Saiba mais &rarr;</Link>
                 </div>
               </div>
 

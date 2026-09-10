@@ -48,6 +48,11 @@ export default function NoticiaDetalhe() {
             marginBottom: "20px"
           }}
         />
+        {/* 👇 Exibe a fonte da imagem na notícia aberta */}
+        {noticia.fonte && (
+          <span className="text-xs text-gray-500 italic block mt-1">
+            {noticia.fonte}
+          </span>
         
       )}
 

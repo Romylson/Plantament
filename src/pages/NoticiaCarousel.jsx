@@ -30,10 +30,10 @@ export default function NoticiaCarousel() {
       )}
         {/* 👇 Exibe a fonte da imagem na notícia aberta */}
         {noticia.fonte && (
-          <figcaption className="legenda-imagem-detalhe">
+          <span className="text-xs text-gray-500 italic block mt-1">
             {noticia.fonte}
-          </figcaption>
-        )}
+          </span>
+)}
 
       <p className="noticia-resumo">{noticia.resumo}</p>
 

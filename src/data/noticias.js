@@ -396,7 +396,7 @@ export const noticias = [
     dataISO: "2026-03-19",
     data: formatarDataBR("2026-03-19"),
     imagem: "/images/avancos.jpg",
-    fonte: "Fonte: Divulgação"
+    fonte: "Fonte: Divulgação",
     categoria: "Tratamento",
     leituraMin: 6,
     tags: ["antiamiloide", "monitoramento", "subgrupos"],

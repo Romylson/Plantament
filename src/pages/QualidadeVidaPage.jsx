@@ -200,25 +200,26 @@ export default function QualidadeVidaPage() {
           <article key={tema.id} className="section-card">
             <h3>{tema.icone} {tema.titulo}</h3>
 
-            <img src={tema.imagem} alt={tema.titulo} className="qualidade-img" />
-            {/* Tag com a fonte da imagem */}
+            {/* Container da imagem + legenda */}
+            <div style={{ width: "100%", marginBottom: "12px" }}>
+              <img src={tema.imagem} alt={tema.titulo} className="qualidade-img" />
+
+              {/* Fonte exibida logo abaixo da imagem, discreta e alinhada */}
               {tema.fonte && (
                 <span
                   style={{
-                    position: "absolute",
-                    bottom: "6px",
-                    right: "6px",
-                    backgroundColor: "rgba(0, 0, 0, 0.7)",
-                    color: "#ffffff",
-                    fontSize: "0.65rem",
-                    padding: "2px 6px",
-                    borderRadius: "4px",
-                    pointerEvents: "none"
+                    display: "block",
+                    fontSize: "0.7rem",
+                    color: "#6b7280",
+                    fontStyle: "italic",
+                    marginTop: "4px",
+                    textAlign: "right"
                   }}
                 >
                   {tema.fonte}
                 </span>
-              )} 
+              )}
+            </div>
             <ul>
               {tema.base.map((item) => (
                 <li key={item}>{item}</li>

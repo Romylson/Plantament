@@ -11,9 +11,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 80%;
-  filter: saturate(1.06) contrast(1.04);
-}
+  /* Centraliza a imagem focando mais na parte superior (rostos e telas) */
+  object-position: center 25%; 
+  filter: saturate(1.06) contrast(1.04);}
 
 .seduc-like-carousel .carousel-overlay {
   position: absolute;

@@ -11,6 +11,7 @@ const slides = [
     titulo: "Atualizações sobre Alzheimer",
     destaque: "Clique aqui",
     slug: "atualizacoes-sobre-alzheimer",
+    fonte: "Fonte: Pixabay (www.pixabay.com)",
   },
   {
     src: "/images/fisiopatologia3.jpg",
@@ -42,6 +43,10 @@ export default function ImageCarousel() {
                 <p className="carousel-subtitle">{slide.subtitulo}</p>
                 <h3>{slide.titulo}</h3>
                 <span className="carousel-cta">{slide.destaque}</span>
+                {/* Tag para exibir a fonte no canto inferior direito */}
+                {slide.fonte && (
+                <span className="carousel-fonte">{slide.fonte}</span>
+              )}
               </div>
             </div>
           </Link>

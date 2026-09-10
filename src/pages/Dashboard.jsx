@@ -26,36 +26,42 @@ const cardsPrincipais = [
     descricao: "Causas, sintomas, estágios e avanços na pesquisa.",
     rota: "/alzheimer-dados",
     img: cerebroroxo,
+    fonte: "Fonte: Pixabay (www.pixabay.com)",
   },
   {
     titulo: "Explore a Farmacologia",
     descricao: "Alvos moleculares, fármacos e compostos naturais.",
     rota: "/farmacos",
     img: farmacoroxo,
+    fonte: "Fonte: Pixabay (www.pixabay.com)",
   },
   {
     titulo: "Descubra as Plantas Medicinais",
     descricao: "Espécies, compostos bioativos e evidências no Alzheimer.",
     rota: "/plantas",
     img: plantamedicinal,
+    fonte: "Fonte: Pixabay (www.pixabay.com)",
   },
   {
     titulo: "Moléculas em Destaque",
     descricao: "Estruturas, mecanismos e aplicações.",
     rota: "/fisiopatologia",
     img: molecula,
+    fonte: "Fonte: Pixabay (www.pixabay.com)",
   },
   {
     titulo: "Aprenda",
     descricao: "Mapas mentais, fluxogramas, linha do tempo, quiz e mais.",
     rota: "/educacional",
     img: aprenda,
+    fonte: "Fonte: Pixabay (www.pixabay.com)",
   },
   {
     titulo: "Qualidade de Vida",
     descricao: "Exercício, dieta, sono, natureza e bem-estar.",
     rota: "/qualidade-de-vida",
     img: qualidade,
+    fonte: "Fonte: Pixabay (www.pixabay.com)",
   },
 ];
 
@@ -172,6 +178,8 @@ export default function Dashboard() {
               <div key={card.rota} className="feature-card">
                 <div className="card-media">
                   <img src={card.img} alt={card.titulo} />
+                  {/* Linha que exibe a fonte sobreposta à imagem */}
+                  {card.fonte && <span className="card-fonte">{card.fonte}</span>}
                 </div>
                 <h3>{card.titulo}</h3>
                 <p>{card.descricao}</p>

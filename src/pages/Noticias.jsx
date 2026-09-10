@@ -22,9 +22,10 @@ export default function Noticias() {
               <div className="news-thumb">
                 <img src={n.imagem} alt={n.titulo} />
               </div>
-              {noticia.fonte && (
-                <span className="text-xs text-gray-500 italic block mt-1">
-                  {noticia.fonte}
+              {/* 👇 Exibe a fonte da imagem no card */}
+              {n.fonte && (
+                <span className="legenda-imagem-card">
+                  {n.fonte}
                 </span>
               )}
               <div className="news-body">

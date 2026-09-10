@@ -48,6 +48,7 @@ export default function NoticiaDetalhe() {
             marginBottom: "20px"
           }}
         />
+        
       )}
 
       <div className="noticia-conteudo">

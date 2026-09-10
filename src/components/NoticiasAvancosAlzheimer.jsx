@@ -86,12 +86,12 @@ export default function NoticiasAvancosAlzheimer() {
                 <div className="noticia-img">
                   <img src={item.imagem} alt={item.titulo} />
                 </div>
-                {noticia.fonte && (
+                {item.fonte && (
                   <span 
                     className="text-xs text-gray-500 italic block mt-1"
                     style={{ fontSize: "0.75rem", color: "#6b7280", fontStyle: "italic", marginTop: "6px", display: "block" }}
                   >
-                {noticia.fonte}
+                {item.fonte}
                   </span>
                 )}
 

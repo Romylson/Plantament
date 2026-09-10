@@ -6,6 +6,7 @@ const plantasDestaque = [
   {
     nome: "Rosmarinus officinalis (Alecrim)",
     imagem: "/images/alecrim.jpg",
+    fonte: "Fonte: Freepik / Unsplash",
     historia:
       "Uso tradicional mediterrâneo em culinária e práticas de cuidado; ganhou atenção em estudos de neuroproteção.",
     mecanismo:
@@ -18,6 +19,7 @@ const plantasDestaque = [
   {
     nome: "Curcuma longa (Cúrcuma)",
     imagem: "/images/curcuma.jpg",
+    fonte: "Fonte: Freepik / Adobe Stock",
     historia:
       "Amplamente utilizada na medicina tradicional asiática e em alimentação funcional.",
     mecanismo:
@@ -30,6 +32,7 @@ const plantasDestaque = [
   {
     nome: "Ginkgo biloba",
     imagem: "/images/ginkgo.jpg",
+    fonte: "Fonte: Pixabay / Freepik",
     historia:
       "Emprego tradicional e farmacêutico consolidado em diferentes países para circulação e cognição.",
     mecanismo:
@@ -140,6 +143,20 @@ export default function DiferenciaisInovadoresPage() {
                   alt={planta.nome}
                   className="planta-imagem"
                 />
+                {planta.fonte && (
+                  <span
+                    style={{
+                      display: "block",
+                      fontSize: "0.7rem",
+                      color: "#6b7280",
+                      fontStyle: "italic",
+                      marginTop: "4px",
+                      textAlign: "right"
+                    }}
+                  >
+                    {planta.fonte}
+                  </span>
+                )}
               </div>
 
               <div className="planta-conteudo">

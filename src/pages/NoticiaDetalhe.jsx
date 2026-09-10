@@ -37,18 +37,20 @@ export default function NoticiaDetalhe() {
       </p>
 
       {noticia.imagem && (
-        <img
-          src={noticia.imagem}
-          alt={noticia.titulo}
-          style={{
-            width: "100%",
-            maxHeight: "420px",
-            objectFit: "cover",
-            borderRadius: "12px",
-            marginBottom: "20px"
-          }}
-        />
-        {noticia.fonte && (
+        <div> 
+          <img
+            src={noticia.imagem}
+            alt={noticia.titulo}
+            style={{
+              width: "100%",
+              maxHeight: "420px",
+              objectFit: "cover",
+              borderRadius: "12px",
+              marginBottom: "20px"
+            }}
+          />
+
+          {noticia.fonte && (
             <span 
               className="text-xs text-gray-500 italic block mt-1"
               style={{ fontSize: "0.75rem", color: "#6b7280", fontStyle: "italic", marginTop: "6px", display: "block" }}
@@ -56,8 +58,8 @@ export default function NoticiaDetalhe() {
               {noticia.fonte}
             </span>
           )}
-    </div>
-  )}
+        </div>
+      )}
       <div className="noticia-conteudo">
   {noticia.conteudo.map((bloco, i) => {
     if (typeof bloco === "string") {

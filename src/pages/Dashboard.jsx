@@ -105,7 +105,7 @@ export default function Dashboard() {
             <Link to="/alzheimer-dados">Alzheimer</Link>
             <Link to="/farmacos">Farmacologia</Link>
             <Link to="/plantas">Plantas Medicinais</Link>
-            <Link to="/fisiopatologia">Moléculas</Link>
+            <Link to="/artigos-cientificos">Artigos Científicos</Link>
             <Link to="/secao-cientifica">Evidências Científicas</Link>
             <Link to="/educacional">Aprender</Link>
             <Link to="/qualidade-de-vida">Qualidade de Vida</Link>

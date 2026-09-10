@@ -48,14 +48,16 @@ export default function NoticiaDetalhe() {
             marginBottom: "20px"
           }}
         />
-        {/* 👇 Exibe a fonte da imagem na notícia aberta */}
-          {noticia.fonte && (
-          <span className="text-xs text-gray-500 italic block mt-1">
-            {noticia.fonte}
-          </span>
+        {noticia.fonte && (
+            <span 
+              className="text-xs text-gray-500 italic block mt-1"
+              style={{ fontSize: "0.75rem", color: "#6b7280", fontStyle: "italic", marginTop: "6px", display: "block" }}
+            >
+              {noticia.fonte}
+            </span>
           )}
-      )}
-
+    </div>
+  )}
       <div className="noticia-conteudo">
   {noticia.conteudo.map((bloco, i) => {
     if (typeof bloco === "string") {

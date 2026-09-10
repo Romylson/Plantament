@@ -322,6 +322,8 @@ a {
 }
 
 .card-media {
+  position: relative;
+  overflow: hidden;
   height: 90px;
   display: flex;
   align-items: center;

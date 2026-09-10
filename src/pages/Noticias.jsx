@@ -22,7 +22,11 @@ export default function Noticias() {
               <div className="news-thumb">
                 <img src={n.imagem} alt={n.titulo} />
               </div>
-
+              {noticia.fonte && (
+                <span className="text-xs text-gray-500 italic block mt-1">
+                  {noticia.fonte}
+                </span>
+              )}
               <div className="news-body">
                 <div className="news-meta">
                   <span className="news-badge">{n.categoria}</span>

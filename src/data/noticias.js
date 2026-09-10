@@ -18,6 +18,7 @@ export const noticias = [
     leituraMin: 8,
     imagem: "/images/biomarcadores-noticia.jpg",
     imagemCapa: "/images/biomarcadores-noticia.jpg",
+    fonte: "Fonte: Unsplash / Freepik",
     tags: ["biomarcadores", "p-tau", "NfL", "triagem", "diagnóstico"],
     conteudo: [
       {
@@ -109,6 +110,7 @@ export const noticias = [
     leituraMin: 9,
     imagem: "/images/sono.jpg",
     imagemCapa: "/images/sono.jpg",
+    fonte: "Fonte: Unsplash",
     tags: ["sono", "memória", "apneia", "prevenção", "neuroproteção"],
     conteudo: [
       {
@@ -191,6 +193,7 @@ export const noticias = [
     leituraMin: 10,
     imagem: "/images/intervencao.jpg",
     imagemCapa: "/images/intervencao.jpg",
+    fonte: "Fonte: Freepik",
     tags: ["multidomínio", "dieta", "atividade física", "treino cognitivo", "prevenção"],
     conteudo: [
       {
@@ -250,6 +253,7 @@ export const noticias = [
     dataISO: "2026-02-21",
     data: formatarDataBR("2026-02-21"),
     imagem: "/images/Ia.jpg",
+    fonte: "Fonte: Freepik",
     categoria: "Tecnologia",
     leituraMin: 5,
     tags: ["IA", "neuroimagem", "diagnóstico"],
@@ -321,6 +325,7 @@ export const noticias = [
     dataISO: "2026-03-04",
     data: formatarDataBR("2026-03-04"),
     imagem: "/images/prevencao.jpg",
+    fonte: "Fonte: Unsplash",
     categoria: "Prevenção",
     leituraMin: 5,
     tags: ["exercício", "risco", "idosos"],
@@ -391,6 +396,7 @@ export const noticias = [
     dataISO: "2026-03-19",
     data: formatarDataBR("2026-03-19"),
     imagem: "/images/avancos.jpg",
+    fonte: "Fonte: Divulgação"
     categoria: "Tratamento",
     leituraMin: 6,
     tags: ["antiamiloide", "monitoramento", "subgrupos"],
@@ -461,6 +467,7 @@ export const noticias = [
     dataISO: "2026-04-02",
     data: formatarDataBR("2026-04-02"),
     imagem: "/images/protocolos.jpg",
+    fonte: "Fonte: Equipe PlantaMente",
     categoria: "Educação",
     leituraMin: 5,
     tags: ["aplicativos", "cognição", "adesão"],
@@ -532,6 +539,7 @@ export const noticias = [
     dataISO: "2026-04-16",
     data: formatarDataBR("2026-04-16"),
     imagem: "/images/microbiota.jpg",
+    fonte: "Fonte: Unsplash",
     categoria: "Nutrição",
     leituraMin: 6,
     tags: ["microbiota", "dieta", "inflamação"],

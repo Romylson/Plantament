@@ -20,6 +20,7 @@ const slides = [
     titulo: "Fisiopatologia do Alzheimer",
     destaque: "Saiba mais",
     slug: "fisiopatologia-do-alzheimer",
+    fonte: "Fonte: Pixabay (www.pixabay.com)",
   },
   {
     src: "/images/plantasmedicinais.jpg",
@@ -28,6 +29,7 @@ const slides = [
     titulo: "Plantas em evidência",
     destaque: "Explorar",
     slug: "plantas-em-evidencia",
+    fonte: "Fonte: Pixabay (www.pixabay.com)",
   },
 ];
 

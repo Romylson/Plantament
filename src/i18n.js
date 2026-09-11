@@ -331,6 +331,94 @@ const resources = {
         grave_desc: "Perda de habilidades básicas, dependência total"
       
       },
+      // Navegação Superior
+      nav_home: "Início",
+      nav_alzheimer: "Alzheimer",
+      nav_pharmacology: "Farmacologia",
+      nav_plants: "Plantas Medicinais",
+      nav_articles: "Artigos Científicos",
+      nav_evidences: "Evidências Científicas",
+      nav_differentials: "Diferenciais Inovadores",
+      nav_blog: "Blog Científico",
+      nav_games: "Jogos",
+      nav_about: "Sobre",
+      search_placeholder: "Buscar...",
+      search_button: "Buscar",
+      accessibility: "Acessibilidade",
+      site_tagline: "PLANTAS • CIÊNCIA • CÉREBRO",
+
+      // Hero Section
+      hero_tagline: "CIÊNCIA HOJE, MAIS MEMÓRIAS AMANHÃ",
+      hero_subtitle: "Alzheimer, Plantas e Ciência",
+      hero_description: "Uma plataforma digital que conecta neurociência, farmacologia e plantas medicinais para informar, educar e inspirar uma vida com mais saúde cerebral.",
+      hero_btn_explore: "Explorar conteúdos",
+      hero_btn_project: "Conheça o projeto",
+      slogan_handwritten: "Plantas hoje, mentes amanhã.",
+
+      // Pilares do Slogan Card
+      pillar_neuroprotection: "NEUROPROTEÇÃO",
+      pillar_plants: "PLANTAS MEDICINAIS",
+      pillar_evidences: "EVIDÊNCIAS CIENTÍFICAS",
+      pillar_quality: "QUALIDADE DE VIDA",
+
+      // Cards Principais (Grid de 6 cards)
+      card_alzheimer_title: "Entenda o Alzheimer",
+      card_alzheimer_desc: "Causas, sintomas, estágios e avanços na pesquisa.",
+      card_pharmacology_title: "Explore a Farmacologia",
+      card_pharmacology_desc: "Alvos moleculares, fármacos e compostos naturais.",
+      card_plants_title: "Descubra as Plantas Medicinais",
+      card_plants_desc: "Espécies, compostos bioativos e evidências no Alzheimer.",
+      card_molecules_title: "Moléculas em Destaque",
+      card_molecules_desc: "Estruturas, mecanismos e aplicações.",
+      card_learn_title: "Aprenda",
+      card_learn_desc: "Mapas mentais, fluxogramas, linha do tempo, quiz e mais.",
+      card_quality_title: "Qualidade de Vida",
+      card_quality_desc: "Exercício, dieta, sono, natureza e bem-estar.",
+
+      // Faixa de Valores / Pilares
+      pillar_evidence_based: "CONTEÚDO BASEADO EM EVIDÊNCIAS",
+      pillar_accessible_language: "LINGUAGEM ACESSÍVEL",
+      pillar_for_everyone: "INFORMAÇÃO PARA TODOS",
+      pillar_plants_for_brain: "PLANTAS A FAVOR DO CÉREBRO",
+      pillar_more_quality: "MAIS QUALIDADE DE VIDA",
+      pillar_quote: "Conhecimento é uma semente que nunca se perde.",
+
+      // 4 Blocos em Destaque
+      block_explore_brain_title: "Explore o Cérebro",
+      block_explore_brain_desc: "Clique nas regiões para conhecer suas funções e relação com o Alzheimer.",
+      block_explore_brain_btn: "Ver anatomia interativa",
+      badge_plant_focus: "PLANTA EM FOCO",
+      rosmarinus_desc: "Memória, antioxidante e neuroproteção.",
+      badge_molecule_focus: "MOLÉCULA EM FOCO",
+      terpineno_desc: "Propriedades e alvos investigados.",
+      learn_more: "Saiba mais",
+
+      // Newsletter & Redes
+      newsletter_title: "Receba novidades do Plantamente",
+      newsletter_subtitle: "Artigos, atualizações e novos conteúdos.",
+      newsletter_placeholder: "Seu e-mail",
+      newsletter_success: "Obrigado por se inscrever!",
+      follow_us: "Siga-nos",
+
+      // Rodapé
+      footer_presentation: "Apresentação",
+      footer_terms: "Termos de uso",
+      footer_privacy: "Política de privacidade",
+      footer_contact: "Contato",
+
+      // Gerais / Legado
+      app_name: "Plantamente",
+      login: "Entrar",
+      change_language: "Alterar idioma",
+      dashboard: "Dashboard",
+      physiopathology: "Fisiopatologia",
+      plants: "Plantas",
+      drugs: "Fármacos",
+      educational_games: "Jogos Educativos",
+      brain3d: "Cérebro 3D",
+      scientific_articles: "Artigos Científicos",
+      history: "Histórico do Site",
+      about_site: "Apresentação do Site"
     }
   },
   en: {
@@ -651,6 +739,94 @@ const resources = {
       moderada_desc: "Trouble recognizing family, confusion",
       grave_desc: "Loss of basic skills, total dependence"  
       }
+      // Navbar
+      nav_home: "Home",
+      nav_alzheimer: "Alzheimer's",
+      nav_pharmacology: "Pharmacology",
+      nav_plants: "Medicinal Plants",
+      nav_articles: "Scientific Articles",
+      nav_evidences: "Scientific Evidence",
+      nav_differentials: "Innovative Features",
+      nav_blog: "Scientific Blog",
+      nav_games: "Games",
+      nav_about: "About",
+      search_placeholder: "Search...",
+      search_button: "Search",
+      accessibility: "Accessibility",
+      site_tagline: "PLANTS • SCIENCE • BRAIN",
+
+      // Hero
+      hero_tagline: "SCIENCE TODAY, MORE MEMORIES TOMORROW",
+      hero_subtitle: "Alzheimer's, Plants and Science",
+      hero_description: "A digital platform connecting neuroscience, pharmacology, and medicinal plants to inform, educate, and inspire better brain health.",
+      hero_btn_explore: "Explore content",
+      hero_btn_project: "Discover the project",
+      slogan_handwritten: "Plants today, minds tomorrow.",
+
+      // Slogan Card
+      pillar_neuroprotection: "NEUROPROTECTION",
+      pillar_plants: "MEDICINAL PLANTS",
+      pillar_evidences: "SCIENTIFIC EVIDENCE",
+      pillar_quality: "QUALITY OF LIFE",
+
+      // Main 6 Cards
+      card_alzheimer_title: "Understand Alzheimer's",
+      card_alzheimer_desc: "Causes, symptoms, stages, and research advances.",
+      card_pharmacology_title: "Explore Pharmacology",
+      card_pharmacology_desc: "Molecular targets, drugs, and natural compounds.",
+      card_plants_title: "Discover Medicinal Plants",
+      card_plants_desc: "Species, bioactive compounds, and Alzheimer's evidence.",
+      card_molecules_title: "Featured Molecules",
+      card_molecules_desc: "Structures, mechanisms, and applications.",
+      card_learn_title: "Learn",
+      card_learn_desc: "Mind maps, flowcharts, timeline, quizzes, and more.",
+      card_quality_title: "Quality of Life",
+      card_quality_desc: "Exercise, diet, sleep, nature, and well-being.",
+
+      // Pillars Bar
+      pillar_evidence_based: "EVIDENCE-BASED CONTENT",
+      pillar_accessible_language: "ACCESSIBLE LANGUAGE",
+      pillar_for_everyone: "INFORMATION FOR ALL",
+      pillar_plants_for_brain: "PLANTS FOR THE BRAIN",
+      pillar_more_quality: "BETTER QUALITY OF LIFE",
+      pillar_quote: "Knowledge is a seed that is never lost.",
+
+      // Highlights Blocks
+      block_explore_brain_title: "Explore the Brain",
+      block_explore_brain_desc: "Click regions to discover functions and their link to Alzheimer's.",
+      block_explore_brain_btn: "View interactive anatomy",
+      badge_plant_focus: "PLANT IN FOCUS",
+      rosmarinus_desc: "Memory, antioxidant, and neuroprotection.",
+      badge_molecule_focus: "MOLECULE IN FOCUS",
+      terpineno_desc: "Investigated properties and targets.",
+      learn_more: "Learn more",
+
+      // Newsletter & Social
+      newsletter_title: "Get PlantaMente updates",
+      newsletter_subtitle: "Articles, updates, and new content.",
+      newsletter_placeholder: "Your e-mail",
+      newsletter_success: "Thank you for subscribing!",
+      follow_us: "Follow us",
+
+      // Footer
+      footer_presentation: "Presentation",
+      footer_terms: "Terms of use",
+      footer_privacy: "Privacy policy",
+      footer_contact: "Contact",
+
+      // Legacy / General
+      app_name: "Plantamente",
+      login: "Login",
+      change_language: "Change language",
+      dashboard: "Dashboard",
+      physiopathology: "Physiopathology",
+      plants: "Plants",
+      drugs: "Drugs",
+      educational_games: "Educational Games",
+      brain3d: "3D Brain",
+      scientific_articles: "Scientific Articles",
+      history: "Site History",
+      about_site: "About the Site"
     }
   },
   es: {
@@ -973,6 +1149,94 @@ const resources = {
       grave_desc: "Pérdida de habilidades básicas, dependencia total"
 
       }
+      // Navbar
+      nav_home: "Inicio",
+      nav_alzheimer: "Alzheimer",
+      nav_pharmacology: "Farmacología",
+      nav_plants: "Plantas Medicinales",
+      nav_articles: "Artículos Científicos",
+      nav_evidences: "Evidencias Científicas",
+      nav_differentials: "Diferenciales Innovadores",
+      nav_blog: "Blog Científico",
+      nav_games: "Juegos",
+      nav_about: "Acerca de",
+      search_placeholder: "Buscar...",
+      search_button: "Buscar",
+      accessibility: "Accesibilidad",
+      site_tagline: "PLANTAS • CIENCIA • CEREBRO",
+
+      // Hero
+      hero_tagline: "CIENCIA HOY, MÁS MEMORIAS MAÑANA",
+      hero_subtitle: "Alzheimer, Plantas y Ciencia",
+      hero_description: "Una plataforma digital que conecta neurociencia, farmacología y plantas medicinales para informar, educar e inspirar la salud cerebral.",
+      hero_btn_explore: "Explorar contenidos",
+      hero_btn_project: "Conozca el proyecto",
+      slogan_handwritten: "Plantas hoy, mentes mañana.",
+
+      // Slogan Card
+      pillar_neuroprotection: "NEUROPROTECCIÓN",
+      pillar_plants: "PLANTAS MEDICINALES",
+      pillar_evidences: "EVIDENCIAS CIENTÍFICAS",
+      pillar_quality: "CALIDAD DE VIDA",
+
+      // Main 6 Cards
+      card_alzheimer_title: "Comprenda el Alzheimer",
+      card_alzheimer_desc: "Causas, síntomas, etapas y avances en la investigación.",
+      card_pharmacology_title: "Explore la Farmacología",
+      card_pharmacology_desc: "Dianas moleculares, fármacos y compuestos naturales.",
+      card_plants_title: "Descubra las Plantas Medicinales",
+      card_plants_desc: "Especies, compuestos bioactivos y evidencias en Alzheimer.",
+      card_molecules_title: "Moléculas en Destacado",
+      card_molecules_desc: "Estructuras, mecanismos y aplicaciones.",
+      card_learn_title: "Aprenda",
+      card_learn_desc: "Mapas mentales, diagramas de flujo, línea de tiempo, quiz y más.",
+      card_quality_title: "Calidad de Vida",
+      card_quality_desc: "Ejercicio, dieta, sueño, naturaleza y bienestar.",
+
+      // Pillars Bar
+      pillar_evidence_based: "CONTENIDO BASADO EN EVIDENCIAS",
+      pillar_accessible_language: "LENGUAJE ACCESIBLE",
+      pillar_for_everyone: "INFORMACIÓN PARA TODOS",
+      pillar_plants_for_brain: "PLANTAS A FAVOR DEL CEREBRO",
+      pillar_more_quality: "MÁS CALIDAD DE VIDA",
+      pillar_quote: "El conocimiento es una semilla que nunca se pierde.",
+
+      // Highlights
+      block_explore_brain_title: "Explore el Cerebro",
+      block_explore_brain_desc: "Haga clic en las regiones para conocer sus funciones y relación con el Alzheimer.",
+      block_explore_brain_btn: "Ver anatomía interactiva",
+      badge_plant_focus: "PLANTA EN ENFOQUE",
+      rosmarinus_desc: "Memoria, antioxidante y neuroprotección.",
+      badge_molecule_focus: "MOLÉCULA EN ENFOQUE",
+      terpineno_desc: "Propiedades y dianas investigadas.",
+      learn_more: "Saber más",
+
+      // Newsletter
+      newsletter_title: "Reciba novedades de PlantaMente",
+      newsletter_subtitle: "Artículos, actualizaciones y nuevos contenidos.",
+      newsletter_placeholder: "Su e-mail",
+      newsletter_success: "¡Gracias por suscribirse!",
+      follow_us: "Síguenos",
+
+      // Footer
+      footer_presentation: "Presentación",
+      footer_terms: "Términos de uso",
+      footer_privacy: "Política de privacidad",
+      footer_contact: "Contacto",
+
+      // General
+      app_name: "Plantamente",
+      login: "Iniciar sesión",
+      change_language: "Cambiar idioma",
+      dashboard: "Dashboard",
+      physiopathology: "Fisiopatología",
+      plants: "Plantas",
+      drugs: "Fármacos",
+      educational_games: "Juegos Educativos",
+      brain3d: "Cerebro 3D",
+      scientific_articles: "Artículos Científicos",
+      history: "Historial del Sitio",
+      about_site: "Presentación del Sitio"
     }
   }
 };

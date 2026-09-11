@@ -137,25 +137,29 @@ export default function DiferenciaisInovadoresPage() {
         <div className="grid-plantas-semana">
           {plantasDestaque.map((planta) => (
             <article className="card-planta-semana" key={planta.nome}>
-              <div className="planta-imagem-wrap">
+              <div 
+                className="planta-imagem-wrap" 
+                style={{ height: "auto", overflow: "visible", marginBottom: "12px" }}
+              >
                 <img
                   src={planta.imagem}
                   alt={planta.nome}
                   className="planta-imagem"
                 />
                 {planta.fonte && (
-                  <span
+                  <small
                     style={{
                       display: "block",
-                      fontSize: "0.7rem",
+                      fontSize: "0.75rem",
                       color: "#6b7280",
                       fontStyle: "italic",
                       marginTop: "4px",
-                      textAlign: "right"
+                      textAlign: "right",
+                      width: "100%"
                     }}
                   >
                     {planta.fonte}
-                  </span>
+                  </small>
                 )}
               </div>
 

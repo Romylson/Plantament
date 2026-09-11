@@ -699,6 +699,30 @@ a {
   display: block;
 }
 
+/* Ajuste Fino para Alinhamento Vertical Perfeito do Idioma */
+.lang-dropdown-wrapper {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  margin-left: 10px;
+}
+
+.lang-trigger-text {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.05rem;
+  line-height: 1;
+  user-select: none;
+}
+
+.lang-trigger-text .caret-icon {
+  font-size: 0.55rem;
+  margin-left: 3px;
+  color: #555;
+  transition: transform 0.2s ease;
+}
+
 /* ==========================================================================
    RESPONSIVIDADE (MOBILE / TABLET)
    ========================================================================== */

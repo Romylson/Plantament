@@ -120,18 +120,17 @@ export default function Dashboard() {
             <Link to="/jogos">{t("nav_games", "Jogos")}</Link>
             <Link to="/historico">{t("nav_about", "Sobre")}</Link>
 
-            {/* SELETOR DE IDIOMA AJUSTADO */}
-            <div className="lang-selector-container dropdown">
-              <button
-                className="lang-btn dropdown-toggle"
-                type="button"
+            {/* Seletor de Idioma Perfeitamente Alinhado */}
+            <div className="lang-dropdown-wrapper">
+              <span
                 id="langDropdown"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
+                className="lang-trigger-text"
               >
-                <span className="lang-icon">🌐</span>
-              </button>
-              
+                🌐<span className="caret-icon">▼</span>
+              </span>
+
               <ul className="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="langDropdown">
                 <li>
                   <button className="dropdown-item d-flex align-items-center" onClick={() => changeLanguage("pt")}>

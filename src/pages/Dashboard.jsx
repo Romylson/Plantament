@@ -18,6 +18,15 @@ import qualidade from "../assets/qualidade.jfif";
 import rosmarinus from "../assets/rosmarinus.jpg";
 import terpineno from "../assets/terpineno.png";
 import cerebroRegioesImg from "../assets/regioescerebro.jfif";
+import { useTranslation } from "react-i18next";
+import i18n from "../i18n";
+
+// Dentro do seu componente:
+const { t } = useTranslation();
+
+function changeLanguage(lng) {
+  i18n.changeLanguage(lng);
+}
 
 // Mapeamento dos 6 cards principais da tela
 const cardsPrincipais = [
@@ -111,6 +120,40 @@ export default function Dashboard() {
             <Link to="/blog-cientifico">Blog Científico</Link>
             <Link to="/jogos">Jogos</Link>
             <Link to="/historico">Sobre</Link>
+              {/* Adicione o Dropdown de Idioma logo ao lado de "Sobre" */}
+            <div className="dropdown d-inline-block ms-2">
+              <button
+                className="btn btn-sm btn-light dropdown-toggle px-2"
+                type="button"
+                id="langDropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style={{ border: "none", background: "transparent" }}
+              >
+                <span style={{ fontSize: "1.1rem" }}>🌐</span>
+              </button>
+              
+              <ul className="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="langDropdown">
+                <li>
+                  <button className="dropdown-item d-flex align-items-center" onClick={() => changeLanguage("pt")}>
+                    <span style={{ fontSize: "1.2rem" }} role="img" aria-label="Português">🇧🇷</span>
+                    <span className="ms-2">Português</span>
+                  </button>
+                </li>
+                <li>
+                  <button className="dropdown-item d-flex align-items-center" onClick={() => changeLanguage("en")}>
+                    <span style={{ fontSize: "1.2rem" }} role="img" aria-label="English">🇺🇸</span>
+                    <span className="ms-2">English</span>
+                  </button>
+                </li>
+                <li>
+                  <button className="dropdown-item d-flex align-items-center" onClick={() => changeLanguage("es")}>
+                    <span style={{ fontSize: "1.2rem" }} role="img" aria-label="Español">🇪🇸</span>
+                    <span className="ms-2">Español</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
           </nav>
 
           <div className="header-actions">
@@ -320,6 +363,8 @@ export default function Dashboard() {
           </div>
 
           <div className="footer-links">
+            <Link to="/apresentacao">Apresentação</Link>
+            <span className="divider">|</span>
             <Link to="/termos">Termos de uso</Link>
             <span className="divider">|</span>
             <Link to="/privacidade">Política de privacidade</Link>

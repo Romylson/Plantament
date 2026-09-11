@@ -115,7 +115,7 @@ export default function NoticiasAvancosAlzheimer() {
                     <p className="noticia-desc-pro">{resumoText}</p>
 
                     <span className="btn-pro">
-                      Ler notícia <span aria-hidden>→</span>
+                     {t("ler_noticia", "Ler notícia")} <span aria-hidden>→</span>
                     </span>
                   </div>
                 </Link>

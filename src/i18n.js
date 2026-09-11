@@ -738,7 +738,7 @@ const resources = {
       leve_desc: "Recent memory loss, difficulty with tasks",
       moderada_desc: "Trouble recognizing family, confusion",
       grave_desc: "Loss of basic skills, total dependence"  
-      }
+      },
       // Navbar
       nav_home: "Home",
       nav_alzheimer: "Alzheimer's",

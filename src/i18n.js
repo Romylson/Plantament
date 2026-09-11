@@ -828,7 +828,7 @@ const resources = {
       noticias_pagina_subtitulo: "Selection of updates focusing on diagnosis, prevention, technology, nutrition and neuroprotection.",
       ver_todas: "View all",
       ler_noticia: "Read news",
-      leitura_min: "min"
+      leitura_min: "min",
       // Carousel Items (EN)
       carousel_1_titulo: "Alzheimer's Updates",
       carousel_1_subtitulo: "Biomarkers, early screening, modifying therapies, and prevention: what changed and why it matters.",
@@ -1245,7 +1245,7 @@ const resources = {
       noticias_pagina_subtitulo: "Selección de actualizaciones centradas en diagnóstico, prevención, tecnología, nutrición y neuroprotección.",
       ver_todas: "Ver todas",
       ler_noticia: "Leer noticia",
-      leitura_min: "min"
+      leitura_min: "min",
       // Categorías de Noticias
       cat_diagnostico: "Diagnóstico",
       cat_prevencao: "Prevención",

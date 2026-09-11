@@ -17,6 +17,7 @@ const postsModelo = [
   {
     titulo: "Monoterpenos e modulação da acetilcolinesterase",
     imagem: imgMonoterpenos,
+    fonte: "Fonte: Freepik / Unsplash",
     contextualizacao:
       "A redução da sinalização colinérgica está entre as alterações mais estudadas na doença de Alzheimer. Compostos monoterpênicos têm sido investigados como moduladores da AChE e de vias associadas ao estresse oxidativo.",
     evidencia:
@@ -30,6 +31,7 @@ const postsModelo = [
   {
     titulo: "O papel do Nrf2 na neuroproteção",
     imagem: imgNrf2,
+    fonte: "Fonte: Adobe Stock / Freepik",
     contextualizacao:
       "Nrf2 regula genes antioxidantes e citoprotetores. A ativação dessa via tem sido proposta como estratégia para conter dano oxidativo e inflamação no envelhecimento cerebral.",
     evidencia:
@@ -47,6 +49,7 @@ const postsModelo = [
   {
     titulo: "Limitações dos modelos animais de Alzheimer",
     imagem: imgModelosAnimais,
+    fonte: "Fonte: Unsplash / Pixabay",
     contextualizacao:
       "Modelos animais são essenciais na fase pré-clínica, mas nem sempre reproduzem toda a complexidade clínica, temporal e genética da doença humana.",
     evidencia:
@@ -64,6 +67,7 @@ const postsModelo = [
   {
     titulo: "O que a ciência realmente sabe sobre plantas e memória?",
     imagem: imgPlantasMemoria,
+    fonte: "Fonte: Freepik / Pexels",
     contextualizacao:
       "Plantas medicinais são muito buscadas na prática popular. A análise científica exige separar plausibilidade biológica, evidência pré-clínica e dados clínicos.",
     evidencia:
@@ -121,12 +125,36 @@ export default function BlogCientificoPage() {
         <div className="blog-post-grid">
           {postsModelo.map((post) => (
             <article key={post.titulo} className="blog-post-card">
-              <div className="blog-card-img-wrap">
+              {/* Container da imagem + legenda da fonte */}
+              <div style={{ width: "100%", display: "flex", flexDirection: "column" }}>
                 <img
                   src={post.imagem}
                   alt={post.titulo}
-                  className="blog-card-img"
+                  style={{
+                    width: "100%",
+                    height: "180px",
+                    objectFit: "cover",
+                    borderRadius: "8px 8px 0 0",
+                    display: "block"
+                  }}
                 />
+                
+                {post.fonte && (
+                  <span
+                    style={{
+                      display: "block",
+                      fontSize: "0.68rem",
+                      color: "#6b7280",
+                      fontStyle: "italic",
+                      marginTop: "4px",
+                      marginBottom: "8px",
+                      textAlign: "right",
+                      paddingRight: "4px"
+                    }}
+                  >
+                    {post.fonte}
+                  </span>
+                )}
               </div>
               <h4>{post.titulo}</h4>
               <p><strong>1. Contextualização:</strong> {post.contextualizacao}</p>

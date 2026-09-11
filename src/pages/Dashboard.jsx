@@ -21,12 +21,7 @@ import cerebroRegioesImg from "../assets/regioescerebro.jfif";
 import { useTranslation } from "react-i18next";
 import i18n from "../i18n";
 
-// Dentro do seu componente:
-const { t } = useTranslation();
 
-function changeLanguage(lng) {
-  i18n.changeLanguage(lng);
-}
 
 // Mapeamento dos 6 cards principais da tela
 const cardsPrincipais = [
@@ -75,6 +70,13 @@ const cardsPrincipais = [
 ];
 
 export default function Dashboard() {
+    // Dentro do seu componente:
+  const { t } = useTranslation();
+
+  function changeLanguage(lng) {
+    i18n.changeLanguage(lng);
+  }
+
   const location = useLocation();
   const [searchTerm, setSearchTerm] = useState("");
   const [newsletterEmail, setNewsletterEmail] = useState("");

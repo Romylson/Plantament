@@ -131,25 +131,20 @@ export default function BlogCientificoPage() {
                 <div
                   style={{
                     width: "100%",
-                    height: "200px",
-                    backgroundColor: "#f8fafc",
-                    borderRadius: "8px",
+                    height: "320px",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     overflow: "hidden",
-                    border: "1px solid #e2e8f0",
-                    padding: "4px"
                   }}
                 >
                   <img
                     src={post.imagem}
                     alt={post.titulo}
                     style={{
-                      maxWidth:"100%",
-                      maxHeight:"100%",
+                      width:"100%",
+                      height:"100%",
                       objectFit: "contain",
-                      borderRadius: "4px",
                       display: "block"
                     }}
                   />

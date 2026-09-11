@@ -45,6 +45,7 @@ const plantasDestaque = [
   {
     nome: "Bacopa monnieri",
     imagem: "/images/bacopa.jpg",
+    fonte: "Fonte: Wikimedia / Unsplash",
     historia:
       "Planta da tradição ayurvédica, historicamente ligada a memória e aprendizado.",
     mecanismo:

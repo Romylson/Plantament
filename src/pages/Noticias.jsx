@@ -8,7 +8,10 @@ import "./NoticiasPages.css";
 export default function Noticias() {
   const { t } = useTranslation();
   // ADICIONE ESTA LINHA AQUI:
-  console.log("Array de notícias carregado:", noticias);
+  console.log("Array de notícias carregado:", noticias);~
+  // Teste para ver o que realmente está chegando no componente
+  console.log("Total de notícias:", noticias.length);
+  console.log("Primeira notícia:", noticias[0]);
 
   return (
     <main className="news-page">

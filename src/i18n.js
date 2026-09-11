@@ -1148,7 +1148,7 @@ const resources = {
       moderada_desc: "Dificultad para reconocer familiares, confusión",
       grave_desc: "Pérdida de habilidades básicas, dependencia total"
 
-      }
+      },
       // Navbar
       nav_home: "Inicio",
       nav_alzheimer: "Alzheimer",

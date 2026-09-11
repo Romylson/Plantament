@@ -261,7 +261,11 @@ const resources = {
       noticia_8_callout_text: "Nem todo discurso sobre microbiota tem base sólida. O mais prudente é focar em padrão alimentar global, e não em promessas isoladas ou modismos nutricionais.",
       noticia_8_h2_4: "Aplicação no contexto do PlantaMente",
       noticia_8_p_4: "No PlantaMente, essa notícia se conecta com Qualidade de Vida e Prevenção, mas também com os módulos de evidência e educação. O ponto não é vender uma “dieta milagrosa”, e sim traduzir nutrição em estratégias viáveis, seguras e coerentes com o cuidado cerebral de longo prazo.",
-
+      noticias_pagina_titulo: "Últimas notícias",
+      noticias_pagina_subtitulo: "Seleção de atualizações com foco em diagnóstico, prevenção, tecnologia, nutrição e neuroproteção.",
+      ver_todas: "Ver todas",
+      ler_noticia: "Ler notícia",
+      leitura_min: "min",
       // --- CAROUSEL DE NOTÍCIAS ---
       // Item Carousel 1
       carousel_1_titulo: "Atualizações sobre Alzheimer",
@@ -762,6 +766,11 @@ const resources = {
       noticia_12_titulo: "Artificial intelligence speeds up early diagnosis",
       noticia_12_desc: "AI tools analyze imaging and clinical data, detecting Alzheimer’s up to two years earlier.",
       noticia_12_data: "May 18, 2025",
+      noticias_pagina_titulo: "Latest news",
+      noticias_pagina_subtitulo: "Selection of updates focusing on diagnosis, prevention, technology, nutrition and neuroprotection.",
+      ver_todas: "View all",
+      ler_noticia: "Read news",
+      leitura_min: "min",
       // News Categories
       cat_diagnostico: "Diagnosis",
       cat_prevencao: "Prevention",
@@ -815,7 +824,11 @@ const resources = {
       noticia_7_resumo: "App-guided tasks increase frequency and consistency in cognitive training.",
       noticia_8_titulo: "Nutrition and gut microbiota enter neuroprotection spotlight",
       noticia_8_resumo: "Anti-inflammatory dietary patterns are linked to better cognitive performance in observational studies.",
-
+      noticias_pagina_titulo: "Últimas noticias",
+      noticias_pagina_subtitulo: "Selección de actualizaciones centradas en diagnóstico, prevención, tecnología, nutrición y neuroprotección.",
+      ver_todas: "Ver todas",
+      ler_noticia: "Leer noticia",
+      leitura_min: "min",
       // Carousel Items (EN)
       carousel_1_titulo: "Alzheimer's Updates",
       carousel_1_subtitulo: "Biomarkers, early screening, modifying therapies, and prevention: what changed and why it matters.",

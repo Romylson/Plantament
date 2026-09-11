@@ -72,14 +72,16 @@ export default function NoticiasAvancosAlzheimer() {
       <section className="noticias-wrap">
         <div className="noticias-inner">
           <div className="noticias-head">
-            <h2 className="noticias-title">Últimas notícias</h2>
+            <h2 className="noticias-title">{t("noticias_pagina_titulo", "Últimas notícias")}</h2>
             <p className="noticias-subtitle">
-              Seleção de atualizações com foco em diagnóstico, prevenção, tecnologia, nutrição e neuroproteção.
+              {t("noticias_pagina_subtitulo", "Seleção de atualizações com foco em diagnóstico, prevenção, tecnologia, nutrição e neuroproteção.")}
             </p>
             <Link to="/noticias" className="noticias-all">
-              Ver todas <span aria-hidden>→</span>
+              {t("ver_todas", "Ver todas")} <span aria-hidden>→</span>
             </Link>
           </div>
+          
+          {/* ... restante do código do .map() das notícias e eventos ... */}
 
           <div className="noticias-grid">
             {ultimasNoticias.map((item) => {

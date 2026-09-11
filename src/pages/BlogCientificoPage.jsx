@@ -127,18 +127,34 @@ export default function BlogCientificoPage() {
             <article key={post.titulo} className="blog-post-card">
               {/* Container da imagem + legenda da fonte */}
               <div style={{ width: "100%", display: "flex", flexDirection: "column" }}>
-                <img
-                  src={post.imagem}
-                  alt={post.titulo}
+
+                <div
                   style={{
                     width: "100%",
-                    height: "180px",
-                    objectFit: "cover",
-                    borderRadius: "8px 8px 0 0",
-                    display: "block"
+                    height: "200px",
+                    backgroundColor: "#f8fafc",
+                    borderRadius: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    overflow: "hidden",
+                    border: "1px solid #e2e8f0",
+                    padding: "4px"
                   }}
-                />
-                
+                >
+                  <img
+                    src={post.imagem}
+                    alt={post.titulo}
+                    style={{
+                      maxWidth:"100%",
+                      maxHeight:"100%",
+                      objectFit: "contain",
+                      borderRadius: "4px",
+                      display: "block"
+                    }}
+                  />
+                </div>  
+                {/* Legenda da Fonte */}
                 {post.fonte && (
                   <span
                     style={{
@@ -149,7 +165,7 @@ export default function BlogCientificoPage() {
                       marginTop: "4px",
                       marginBottom: "8px",
                       textAlign: "right",
-                      paddingRight: "4px"
+                      paddingRight: "2px"
                     }}
                   >
                     {post.fonte}

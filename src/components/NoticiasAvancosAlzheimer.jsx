@@ -1,11 +1,10 @@
 // src/components/NoticiasAvancosAlzheimer.jsx
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Card } from "../components/ui/card";
 import "./NoticiasAvancosAlzheimer.css";
 import { ultimasNoticias } from "../data/noticias";
-
-
 
 const eventos = [
   {
@@ -65,9 +64,11 @@ const eventos = [
 ];
 
 export default function NoticiasAvancosAlzheimer() {
+  const { t } = useTranslation();
+
   return (
     <div className="p-3">
-             {/* NOTÍCIAS */}
+      {/* NOTÍCIAS */}
       <section className="noticias-wrap">
         <div className="noticias-inner">
           <div className="noticias-head">
@@ -81,39 +82,47 @@ export default function NoticiasAvancosAlzheimer() {
           </div>
 
           <div className="noticias-grid">
-            {ultimasNoticias.map((item) => (
-              <Link key={item.slug} to={`/noticias/${item.slug}`} className="noticia-card-pro">
-                <div className="noticia-img">
-                  <img src={item.imagem} alt={item.titulo} />
-                </div>
-                {item.fonte && (
-                  <span 
-                    className="text-xs text-gray-500 italic block mt-1"
-                    style={{ fontSize: "0.75rem", color: "#6b7280", fontStyle: "italic", marginTop: "6px", display: "block" }}
-                  >
-                {item.fonte}
-                  </span>
-                )}
+            {ultimasNoticias.map((item) => {
+              // Tratamento seguro utilizando as chaves do noticias.js
+              const tituloText = item.tituloKey ? t(item.tituloKey, { defaultValue: item.slug }) : "Título indisponível";
+              const resumoText = item.resumoKey ? t(item.resumoKey, { defaultValue: "" }) : "";
+              const categoriaText = item.categoriaKey ? t(item.categoriaKey, { defaultValue: "Geral" }) : "Geral";
 
-                <div className="noticia-body-pro">
-                  <div className="noticia-meta-pro">
-                    <span className="badge-pro">{item.categoria}</span>
-                    <span className="date-pro">{item.data}</span>
-                    <span className="read-pro">{item.leituraMin} min</span>
+              return (
+                <Link key={item.slug} to={`/noticias/${item.slug}`} className="noticia-card-pro">
+                  <div className="noticia-img">
+                    <img src={item.imagem} alt={tituloText} />
                   </div>
+                  {item.fonte && (
+                    <span 
+                      className="text-xs text-gray-500 italic block mt-1"
+                      style={{ fontSize: "0.75rem", color: "#6b7280", fontStyle: "italic", marginTop: "6px", display: "block" }}
+                    >
+                      {item.fonte}
+                    </span>
+                  )}
 
-                  <h3 className="noticia-title-pro">{item.titulo}</h3>
-                  <p className="noticia-desc-pro">{item.resumo}</p>
+                  <div className="noticia-body-pro">
+                    <div className="noticia-meta-pro">
+                      <span className="badge-pro">{categoriaText}</span>
+                      <span className="date-pro">{item.data}</span>
+                      <span className="read-pro">{item.leituraMin} min</span>
+                    </div>
 
-                  <span className="btn-pro">
-                    Ler notícia <span aria-hidden>→</span>
-                  </span>
-                </div>
-              </Link>
-            ))}
+                    <h3 className="noticia-title-pro">{tituloText}</h3>
+                    <p className="noticia-desc-pro">{resumoText}</p>
+
+                    <span className="btn-pro">
+                      Ler notícia <span aria-hidden>→</span>
+                    </span>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
+
       {/* EVENTOS */}
       <h3 className="fw-bold mt-5 mb-3 text-center">🧠 Eventos e calendário científico</h3>
 

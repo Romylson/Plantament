@@ -25,7 +25,7 @@ export default function Noticias() {
           {noticias.map((n) => {
             const tituloText = n.tituloKey ? t(n.tituloKey, { defaultValue: n.slug }) : "Título indisponível";
             const resumoText = n.resumoKey ? t(n.resumoKey, { defaultValue: "" }) : "";
-            const categoriaText = n.categoriaKey ? t(n.categoriaKey, { defaultValue: "" }) : "";
+            const categoriaText = n.categoriaKey ? t(n.categoriaKey, { defaultValue: "Geral" }) : "Geral";
 
             return (
               <Link key={n.slug} to={`/noticias/${n.slug}`} className="news-card">

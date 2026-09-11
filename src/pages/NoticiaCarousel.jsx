@@ -1,19 +1,16 @@
-// src/components/NoticiaCarousel.jsx (ou o equivalente no seu projeto)
+// src/pages/NoticiaCarousel.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ultimasNoticias } from "../data/noticias";
-import "./NoticiasCarousel.css"; // ajuste o CSS se necessário
 
 export default function NoticiaCarousel() {
   const { t } = useTranslation();
 
   return (
     <div className="news-carousel-container">
-      {/* Se houver cabeçalho no carrossel, use as chaves */}
       <div className="news-grid">
         {ultimasNoticias.map((n) => {
-          // Resolve a tradução da chave ou exibe um fallback de segurança
           const tituloText = n.tituloKey ? t(n.tituloKey, { defaultValue: n.slug }) : "Título indisponível";
           const resumoText = n.resumoKey ? t(n.resumoKey, { defaultValue: "" }) : "";
           const categoriaText = n.categoriaKey ? t(n.categoriaKey, { defaultValue: "" }) : "";

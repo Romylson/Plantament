@@ -7,11 +7,18 @@ import "./NoticiasPages.css";
 
 export default function Noticias() {
   const { t } = useTranslation();
-  // ADICIONE ESTA LINHA AQUI:
-  console.log("Array de notícias carregado:", noticias);~
-  // Teste para ver o que realmente está chegando no componente
-  console.log("Total de notícias:", noticias.length);
-  console.log("Primeira notícia:", noticias[0]);
+
+  // Verificação de segurança: se noticias não for um array, avisa na tela
+  if (!Array.isArray(noticias)) {
+    return (
+      <main className="news-page">
+        <div className="news-container" style={{ color: "red", padding: "20px" }}>
+          <h2>Erro Crítico: 'noticias' não é um array!</h2>
+          <p>Verifique a exportação no arquivo noticias.js</p>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main className="news-page">
@@ -21,44 +28,21 @@ export default function Noticias() {
           <p>
             {t(
               "noticias_pagina_subtitulo",
-              "Atualizações do PlantaMente organizadas por temas: diagnóstico, prevenção, tecnologia, nutrição e produtos naturais."
+              "Atualizações do PlantaMente organizadas por temas."
             )}
           </p>
         </div>
 
         <div className="news-grid">
-          {noticias.map((n) => {
-            const tituloText = n.tituloKey ? t(n.tituloKey) : "Título indisponível";
-            const resumoText = n.resumoKey ? t(n.resumoKey) : "";
-            const categoriaText = n.categoriaKey ? t(n.categoriaKey) : "";
+          {noticias.map((n, index) => {
+            // Teste seguro para exibir o título sem depender ainda do i18n
+            const tituloText = n.tituloKey ? `Chave: ${n.tituloKey}` : `Notícia ${index}`;
 
             return (
-              <Link key={n.slug} to={`/noticias/${n.slug}`} className="news-card">
-                <div className="news-thumb">
-                  <img src={n.imagem} alt={tituloText} />
-                </div>
-                {n.fonte && (
-                  <span className="text-xs text-gray-500 italic block mt-1">
-                    {n.fonte}
-                  </span>
-                )}
-                <div className="news-body">
-                  <div className="news-meta">
-                    <span className="news-badge">{categoriaText}</span>
-                    <span className="news-date">{n.data}</span>
-                    <span className="news-read">
-                      {n.leituraMin} {t("leitura_min", "min")}
-                    </span>
-                  </div>
-
-                  <h3 className="news-title">{tituloText}</h3>
-                  <p className="news-resume">{resumoText}</p>
-
-                  <span className="news-cta">
-                    {t("ler_noticia", "Ler notícia")} <span aria-hidden>→</span>
-                  </span>
-                </div>
-              </Link>
+              <div key={n.slug || index} className="news-card" style={{ border: "1px solid #ccc", padding: "15px", marginBottom: "15px" }}>
+                <h3 className="news-title">{tituloText}</h3>
+                <p className="news-resume">Slug: {n.slug}</p>
+              </div>
             );
           })}
         </div>

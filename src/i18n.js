@@ -824,11 +824,11 @@ const resources = {
       noticia_7_resumo: "App-guided tasks increase frequency and consistency in cognitive training.",
       noticia_8_titulo: "Nutrition and gut microbiota enter neuroprotection spotlight",
       noticia_8_resumo: "Anti-inflammatory dietary patterns are linked to better cognitive performance in observational studies.",
-      noticias_pagina_titulo: "Últimas noticias",
-      noticias_pagina_subtitulo: "Selección de actualizaciones centradas en diagnóstico, prevención, tecnología, nutrición y neuroprotección.",
-      ver_todas: "Ver todas",
-      ler_noticia: "Leer noticia",
-      leitura_min: "min",
+      noticias_pagina_titulo: "Latest news",
+      noticias_pagina_subtitulo: "Selection of updates focusing on diagnosis, prevention, technology, nutrition and neuroprotection.",
+      ver_todas: "View all",
+      ler_noticia: "Read news",
+      leitura_min: "min"
       // Carousel Items (EN)
       carousel_1_titulo: "Alzheimer's Updates",
       carousel_1_subtitulo: "Biomarkers, early screening, modifying therapies, and prevention: what changed and why it matters.",
@@ -1241,6 +1241,11 @@ const resources = {
       noticia_12_titulo: "IA acelera diagnóstico precoz del Alzheimer",
       noticia_12_desc: "Herramientas de inteligencia artificial detectan la enfermedad hasta dos años antes mediante análisis de imágenes.",
       noticia_12_data: "18 de mayo de 2025",
+      noticias_pagina_titulo: "Últimas noticias",
+      noticias_pagina_subtitulo: "Selección de actualizaciones centradas en diagnóstico, prevención, tecnología, nutrición y neuroprotección.",
+      ver_todas: "Ver todas",
+      ler_noticia: "Leer noticia",
+      leitura_min: "min"
       // Categorías de Noticias
       cat_diagnostico: "Diagnóstico",
       cat_prevencao: "Prevención",

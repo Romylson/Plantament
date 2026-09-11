@@ -7,13 +7,23 @@ import { ultimasNoticias } from "../data/noticias";
 export default function NoticiaCarousel() {
   const { t } = useTranslation();
 
+  // Verifica se há notícias para exibir
+  if (!ultimasNoticias || ultimasNoticias.length === 0) {
+    return <div style={{ padding: "20px", textAlign: "center" }}>Nenhuma notícia encontrada.</div>;
+  }
+
   return (
     <div className="news-carousel-container">
       <div className="news-grid">
         {ultimasNoticias.map((n) => {
-          const tituloText = n.tituloKey ? t(n.tituloKey, { defaultValue: n.slug }) : "Título indisponível";
-          const resumoText = n.resumoKey ? t(n.resumoKey, { defaultValue: "" }) : "";
-          const categoriaText = n.categoriaKey ? t(n.categoriaKey, { defaultValue: "" }) : "";
+          // Garante fallback visual caso a chave do i18n venha vazia
+          const rawTitulo = n.tituloKey ? t(n.tituloKey) : "";
+          const tituloText = rawTitulo && !rawTitulo.includes("noticia_") ? rawTitulo : `Notícia: ${n.slug}`;
+          
+          const rawResumo = n.resumoKey ? t(n.resumoKey) : "";
+          const resumoText = rawResumo && !rawResumo.includes("noticia_") ? rawResumo : "Resumo indisponível no momento.";
+
+          const categoriaText = n.categoriaKey ? t(n.categoriaKey) : "Geral";
 
           return (
             <Link key={n.slug} to={`/noticias/${n.slug}`} className="news-card">

@@ -95,7 +95,40 @@ a {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 15px;
+}
+
+.lang-selector-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+}
+
+.lang-btn {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: none !important;
+  cursor: pointer;
+  line-height: 1 !important;
+}
+
+/* Esconde a setinha padrão do Bootstrap se preferir apenas o globo */
+.lang-btn::after {
+  vertical-align: middle !important;
+  margin-left: 4px !important;
+}
+
+.lang-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .main-nav a {

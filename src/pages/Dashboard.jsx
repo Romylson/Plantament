@@ -108,7 +108,7 @@ export default function Dashboard() {
             </Link>
           </div>
 
-          <nav className="main-nav d-flex align-items-center">
+          <nav className="main-nav">
             <Link to="/" className={location.pathname === "/" ? "active" : ""}>{t("nav_home", "Início")}</Link>
             <Link to="/alzheimer-dados">{t("nav_alzheimer", "Alzheimer")}</Link>
             <Link to="/farmacos">{t("nav_pharmacology", "Farmacologia")}</Link>
@@ -119,18 +119,17 @@ export default function Dashboard() {
             <Link to="/blog-cientifico">{t("nav_blog", "Blog Científico")}</Link>
             <Link to="/jogos">{t("nav_games", "Jogos")}</Link>
             <Link to="/historico">{t("nav_about", "Sobre")}</Link>
-            
-            {/* Seletor de Idioma Alinhado */}
-            <div className="dropdown d-inline-flex align-items-center ms-2" style={{ lineHeight: 1 }}>
+
+            {/* SELETOR DE IDIOMA AJUSTADO */}
+            <div className="lang-selector-container dropdown">
               <button
-                className="btn btn-sm btn-light dropdown-toggle p-0 d-flex align-items-center"
+                className="lang-btn dropdown-toggle"
                 type="button"
                 id="langDropdown"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-                style={{ border: "none", background: "transparent", cursor: "pointer" }}
               >
-                <span style={{ fontSize: "1.1rem", lineHeight: 1 }}>🌐</span>
+                <span className="lang-icon">🌐</span>
               </button>
               
               <ul className="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="langDropdown">

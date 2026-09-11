@@ -105,3 +105,52 @@ footer {
   background-color: #6d28d9;
 }
 
+/* =================================================================ate
+   AJUSTES GLOBAIS PARA TELA DE MACBOOK (RETINA E LARGURAS TÍPICAS)
+   =================================================================== */
+
+@media screen and (min-width: 1200px) and (max-width: 1512px) {
+  /* Garante que containers principais tenham respiros laterais confortáveis */
+  body {
+    -webkit-font-smoothing: antialiased; /* Melhora a nitidez de fontes em telas Retina */
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Padroniza a largura máxima dos containers centrais para evitar esticar demais */
+  .container, 
+  .news-container, 
+  .noticias-inner,
+  main {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  /* Ajustes gerais em grids para não colarem nas bordas do MacBook */
+  .grid, 
+  .news-grid, 
+  .noticias-grid {
+    gap: 24px;
+  }
+
+  /* Ajustes proporcionais em títulos principais para melhor hierarquia */
+  h1 {
+    font-size: 2.25rem !important;
+  }
+  
+  h2 {
+    font-size: 1.75rem !important;
+  }
+}
+
+/* Opcional: Para telas de MacBook Pro maiores (16 polegadas, ex: 1536px a 1728px) */
+@media screen and (min-width: 1513px) and (max-width: 1728px) {
+  .container, 
+  .news-container, 
+  .noticias-inner {
+    max-width: 1400px;
+  }
+}
+

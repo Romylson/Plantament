@@ -164,7 +164,15 @@ export default function Dashboard() {
               />
               <button type="submit" aria-label={t("search_button", "Buscar")}>🔍</button>
             </form>
-            <button className="accessibility-btn">
+            <button 
+              className="accessibility-btn"
+              onClick={() => {
+                const elemento = document.getElementById("recursos-acessibilidade");
+                if (elemento) {
+                  elemento.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
               ♿ {t("accessibility", "Acessibilidade")}
             </button>
           </div>

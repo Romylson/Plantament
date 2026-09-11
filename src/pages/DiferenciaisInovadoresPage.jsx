@@ -137,35 +137,42 @@ export default function DiferenciaisInovadoresPage() {
         <div className="grid-plantas-semana">
           {plantasDestaque.map((planta) => (
             <article className="card-planta-semana" key={planta.nome}>
-              <div 
-                className="planta-imagem-wrap" 
-                style={{ height: "auto", overflow: "visible", marginBottom: "12px" }}
-              >
+              
+              {/* Container de Imagem com controle de altura e overflow */}
+              <div style={{ width: "100%", display: "flex", flexDirection: "column" }}>
                 <img
                   src={planta.imagem}
                   alt={planta.nome}
-                  className="planta-imagem"
+                  style={{
+                    width: "100%",
+                    height: "180px",        /* Força todas as imagens a terem a mesma altura */
+                    objectFit: "cover",     /* Recorta a imagem proporcionalmente sem distorcer */
+                    borderRadius: "8px 8px 0 0",
+                    display: "block"
+                  }}
                 />
+
+                {/* Legenda da Fonte */}
                 {planta.fonte && (
-                  <small
+                  <span
                     style={{
                       display: "block",
-                      fontSize: "0.75rem",
+                      fontSize: "0.68rem",
                       color: "#6b7280",
                       fontStyle: "italic",
                       marginTop: "4px",
+                      marginBottom: "8px",
                       textAlign: "right",
-                      width: "100%"
+                      paddingRight: "4px"
                     }}
                   >
                     {planta.fonte}
-                  </small>
+                  </span>
                 )}
               </div>
 
               <div className="planta-conteudo">
                 <h3>{planta.nome}</h3>
-
                 <p><strong>História:</strong> {planta.historia}</p>
                 <p><strong>Mecanismo molecular:</strong> {planta.mecanismo}</p>
                 <p><strong>Potencial terapêutico:</strong> {planta.potencial}</p>

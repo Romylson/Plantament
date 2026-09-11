@@ -23,9 +23,10 @@ export default function Noticias() {
 
         <div className="news-grid">
           {noticias.map((n) => {
-            const tituloText = n.tituloKey ? t(n.tituloKey) : (t(n.titulo) || n.titulo);
-            const resumoText = n.resumoKey ? t(n.resumoKey) : t(n.resumo, { defaultValue: n.resumo });
-            const categoriaText = n.categoriaKey ? t(n.categoriaKey) : t(n.categoria, { defaultValue: n.categoria });
+            const tituloText = n.tituloKey ? t(n.tituloKey) : "Título indisponível";
+            const resumoText = n.resumoKey ? t(n.resumoKey) : "";
+            const categoriaText = n.categoriaKey ? t(n.categoriaKey) : "";
+
             return (
               <Link key={n.slug} to={`/noticias/${n.slug}`} className="news-card">
                 <div className="news-thumb">

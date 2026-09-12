@@ -93,6 +93,15 @@ export default function Dashboard() {
     },
   ];
 
+  // Filtra os cards dinamicamente conforme o que o usuário digita na busca
+  const cardsFiltrados = cardsPrincipais.filter((card) => {
+    const termo = searchTerm.toLowerCase();
+    return (
+      card.titulo.toLowerCase().includes(termo) ||
+      card.descricao.toLowerCase().includes(termo)
+    );
+  });
+
   return (
     <div className="plantamente-landing">
       {/* 1. Header / Navbar Superior */}
@@ -221,22 +230,26 @@ export default function Dashboard() {
       <section className="categories-section">
         <div className="section-container">
           <div className="cards-grid">
-            {cardsPrincipais.map((card) => (
-              <div key={card.rota} className="feature-card">
-                <div className="card-media">
-                  <img src={card.img} alt={card.titulo} />
-                  {/* Linha que exibe a fonte sobreposta à imagem */}
-                  {card.fonte && <span className="card-fonte">{card.fonte}</span>}
+            {cardsFiltrados.length > 0 ? (
+              cardsFiltrados.map((card) => (
+                <div key={card.rota} className="feature-card">
+                  <div className="card-media">
+                    <img src={card.img} alt={card.titulo} />
+                    {card.fonte && <span className="card-fonte">{card.fonte}</span>}
+                  </div>
+                  <h3>{card.titulo}</h3>
+                  <p>{card.descricao}</p>
+                  <Link to={card.rota} className="card-arrow-btn" aria-label={`Acessar ${card.titulo}`}>
+                    &gt;
+                  </Link>
                 </div>
-                <h3>{card.titulo}</h3>
-                <p>{card.descricao}</p>
-                <Link to={card.rota} className="card-arrow-btn" aria-label={`Acessar ${card.titulo}`}>
-                  &gt;
-                </Link>
-              </div>
-            ))}
+              ))
+            ) : (
+              <p className="text-center text-muted w-100 py-4">
+                {t("no_results", "Nenhum resultado encontrado para sua busca.")}
+              </p>
+            )}
           </div>
-        </div>
       </section>
 
       {/* Carrossel de Imagens */}

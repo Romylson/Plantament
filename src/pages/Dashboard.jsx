@@ -381,7 +381,7 @@ export default function Dashboard() {
               <span className="footer-title">Plantamente<small>.org</small></span>
               <span className="footer-subtitle">{t("site_tagline", "PLANTAS • CIÊNCIA • CÉREBRO")}</span>
             </div>
-            
+          </div>  
           <div className="footer-links">
             <Link to="/apresentacao">{t("footer_presentation", "Apresentação")}</Link>
             <span className="divider">|</span>

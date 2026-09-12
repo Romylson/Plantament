@@ -40,6 +40,7 @@ export default function InnovativeFeatures() {
 
   return (
     <section className="py-6">
+      <section id="recursos-acessibilidade" className="py-6">
       <motion.h2
         className="fw-bold text-2xl text-center mb-4"
         initial={{ opacity: 0, y: 30 }}
@@ -69,9 +70,10 @@ export default function InnovativeFeatures() {
                 🔊 {t("listen")}
               </button>
             </div>
-          </motion.div>
+          </motion.div> 
         ))}
       </div>
     </section>
+   </section>
   );
 }

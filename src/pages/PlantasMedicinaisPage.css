@@ -64,7 +64,7 @@
 .plantas-alfabeto button {
   border: none;
   background: transparent;
-  color: #f4aefa;
+  color: #6c1a74;
   font-size: 37px;
   line-height: 1;
 }
@@ -124,7 +124,7 @@
 }
 
 .filtro-acao-btn {
-  background-color: #2e7d32; /* verde principal */
+  background-color: #f6faf6; /* verde principal */
   color: #661162;
   
 }

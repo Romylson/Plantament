@@ -375,10 +375,13 @@ export default function Dashboard() {
       <footer className="site-footer">
         <div className="footer-container">
           <div className="footer-brand">
-            <span className="footer-title">Plantamente<small>.org</small></span>
-            <span className="footer-subtitle">{t("site_tagline", "PLANTAS • CIÊNCIA • CÉREBRO")}</span>
-          </div>
-
+            {/* Adicionamos a logo aqui */}
+            <img src={logoPlantamente} alt="Logo PlantaMente" className="footer-logo-img" />
+            <div className="footer-brand-text">
+              <span className="footer-title">Plantamente<small>.org</small></span>
+              <span className="footer-subtitle">{t("site_tagline", "PLANTAS • CIÊNCIA • CÉREBRO")}</span>
+            </div>
+            
           <div className="footer-links">
             <Link to="/apresentacao">{t("footer_presentation", "Apresentação")}</Link>
             <span className="divider">|</span>

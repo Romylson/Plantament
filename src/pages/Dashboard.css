@@ -736,6 +736,25 @@ a {
   transition: transform 0.2s ease;
 }
 
+/* Estilização da logo e texto no rodapé */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Espaço entre a logo e o texto */
+}
+
+.footer-logo-img {
+  width: 45px;  /* Ajuste o tamanho da logo conforme preferir */
+  height: 45px;
+  object-fit: contain;
+  border-radius: 8px; /* Opcional: deixa as bordinhas arredondadas se quiser */
+}
+
+.footer-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
 /* ==========================================================================
    RESPONSIVIDADE (MOBILE / TABLET)
    ========================================================================== */

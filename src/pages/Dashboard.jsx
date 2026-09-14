@@ -382,10 +382,7 @@ export default function Dashboard() {
               <span className="footer-subtitle">{t("site_tagline", "PLANTAS • CIÊNCIA • CÉREBRO")}</span>
             </div>
           </div>  
-          {/* Aqui entra o contador de acessos */}
-          <div className="footer-counter-wrapper">
-            <ContadorAcessos />
-          </div>
+          
           <div className="footer-links">
             <Link to="/apresentacao">{t("footer_presentation", "Apresentação")}</Link>
             <span className="divider">|</span>
@@ -399,6 +396,10 @@ export default function Dashboard() {
           <div className="footer-partners">
             <img src={logosParceiros} alt="Apoiadores: UFPI, PPGFarm, NPPM, LAFAC-UFPI" />
           </div>
+        </div>
+        {/* Linha extra opcional logo abaixo para o Contador e Direitos Reservados */}
+        <div className="footer-bottom-bar" style={{ textAlign: "center", marginTop: "20px", paddingTop: "15px", borderTop: "1px solid rgba(255,255,255,0.1)" }}>
+          <ContadorAcessos />
         </div>
       </footer>
     </div>

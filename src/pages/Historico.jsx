@@ -14,7 +14,7 @@ export default function HistoricoPage() {
         <img src={imgHistoria1} alt="Histórico do projeto Plantamente" className="historico-img" />
         {/* Legenda logo abaixo da imagem */}
         <p className="historico-legenda">
-          {t("historico_photo_caption", "Idealizadores do projeto: Railson Pereira Souza e Aldeídia Pereira de Oliveira.")}
+        Idealizadores do projeto: Railson Pereira Souza e Aldeídia Pereira de Oliveira.
         </p>
       </div>
 

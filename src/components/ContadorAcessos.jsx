@@ -2,24 +2,21 @@ import React, { useState, useEffect } from "react";
 import "./ContadorAcessos.css";
 
 export default function ContadorAcessos() {
-  const [visitas, setVisitas] = useState(null);
+  const [visitas, setVisitas] = useState(0);
 
   useEffect(() => {
-    // Usamos um serviço gratuito de contagem (ex: CountAPI)
-    // Substitua "plantamente" por um nome único para o seu projeto caso queira isolar a contagem
-    fetch("https://api.countapi.xyz/hit/plantamente-org/acessos")
-      .then((response) => response.json())
-      .then((data) => {
-        if (data && data.value) {
-          setVisitas(data.value);
-        }
-      })
-      .catch((error) => {
-        console.error("Erro ao carregar contador de acessos:", error);
-      });
-  }, []);
+    // Pega o número atual do navegador ou começa do 120 (por exemplo)
+    let totalVisitas = localStorage.getItem("plantamente_visitas");
+    
+    if (!totalVisitas) {
+      totalVisitas = 10; // Número inicial base para o site
+    } else {
+      totalVisitas = parseInt(totalVisitas, 10) + 1; // Incrementa +1 a cada acesso
+    }
 
-  if (visitas === null) return null; // Não exibe nada enquanto carrega
+    localStorage.setItem("plantamente_visitas", totalVisitas);
+    setVisitas(totalVisitas);
+  }, []);
 
   return (
     <div className="contador-acessos-container">

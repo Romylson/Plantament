@@ -2,13 +2,12 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(115, 33, 126, 0.08); /* Tom levemente roxo combinando com a identidade */
-  border: 1px solid rgba(115, 33, 126, 0.2);
-  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.08); /* Fundo sutil escuro para combinar com o rodapé */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 6px 16px;
   border-radius: 20px;
   font-size: 14px;
-  color: #333;
-  margin: 10px 0;
+  color: #f8f7f8;
 }
 
 .contador-icone {
@@ -16,5 +15,6 @@
 }
 
 .contador-texto strong {
-  color: #73217e; /* Destaca o número com a cor principal do projeto */
+  color: #d476e2; /* Destaca o número com um tom rosa/roxo claro visível no escuro */
+  font-weight: 700;
 }

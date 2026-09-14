@@ -82,12 +82,13 @@ export default function HistoricoPage() {
       </div>
 
       {/* GRID DE IMAGENS */}
-      <div className="historico-grid">
-        <img src={imgHistoria2} alt="Pesquisa científica" className="historico-img" />
-      {/* Legenda logo abaixo da imagem */}
-        <p className="historico-legenda">
-        Desenvolvedor do projeto: Romylson Pereira Sousa.
-        </p>
+      <<div className="historico-grid">
+        <div className="historico-item-legenda">
+          <img src={imgHistoria2} alt="Pesquisa científica" className="historico-img" />
+          <p className="historico-legenda">
+            Desenvolvedor do projeto: Romylson Pereira Sousa.
+          </p>
+        </div>
       </div>
     </main>
   );

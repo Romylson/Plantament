@@ -104,6 +104,25 @@
   margin-top: 8px;
 } 
 
+.historico-item-legenda {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza a imagem e a legenda juntas */
+  text-align: center;
+}
+
+.historico-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.historico-legenda {
+  font-size: 14px;
+  color: #555555;
+  font-style: italic;
+  margin-top: 8px; /* Espaço entre a foto e o texto da legenda */
+}
 /* GRID DE IMAGENS */
 .historico-grid {
   display: grid;

@@ -2,7 +2,7 @@ import React from "react";
 import "./Historico.css";
 
 import imgHistoria1 from "../assets/idealizadores.jpeg";
-import imgHistoria2 from "../assets/historico2.jpg";
+import imgHistoria2 from "../assets/desenvolvedor.jpeg";
 
 export default function HistoricoPage() {
   return (
@@ -84,7 +84,10 @@ export default function HistoricoPage() {
       {/* GRID DE IMAGENS */}
       <div className="historico-grid">
         <img src={imgHistoria1} alt="Pesquisa científica" className="historico-img" />
-        <img src={imgHistoria2} alt="Tecnologia e saúde" className="historico-img" />
+      {/* Legenda logo abaixo da imagem */}
+        <p className="historico-legenda">
+        Desenvolvedor do projeto: Romylson Pereira Sousa.
+        </p>
       </div>
     </main>
   );

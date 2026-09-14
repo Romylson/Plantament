@@ -1,7 +1,7 @@
 import React from "react";
 import "./Historico.css";
 
-import imgHistoria1 from "../assets/idealizadores.jpg";
+import imgHistoria1 from "../assets/idealizadores.jpeg";
 import imgHistoria2 from "../assets/historico2.jpg";
 
 export default function HistoricoPage() {

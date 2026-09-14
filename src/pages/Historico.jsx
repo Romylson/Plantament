@@ -83,7 +83,7 @@ export default function HistoricoPage() {
 
       {/* GRID DE IMAGENS */}
       <div className="historico-grid">
-        <img src={imgHistoria1} alt="Pesquisa científica" className="historico-img" />
+        <img src={imgHistoria2} alt="Pesquisa científica" className="historico-img" />
       {/* Legenda logo abaixo da imagem */}
         <p className="historico-legenda">
         Desenvolvedor do projeto: Romylson Pereira Sousa.

@@ -82,7 +82,7 @@ export default function HistoricoPage() {
       </div>
 
       {/* GRID DE IMAGENS */}
-      <<div className="historico-grid">
+      <div className="historico-grid">
         <div className="historico-item-legenda">
           <img src={imgHistoria2} alt="Pesquisa científica" className="historico-img" />
           <p className="historico-legenda">

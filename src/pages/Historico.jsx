@@ -1,7 +1,7 @@
 import React from "react";
 import "./Historico.css";
 
-import imgHistoria1 from "../assets/historico1.jpg";
+import imgHistoria1 from "../assets/idealizadores.jpg";
 import imgHistoria2 from "../assets/historico2.jpg";
 
 export default function HistoricoPage() {
@@ -12,17 +12,21 @@ export default function HistoricoPage() {
       {/* IMAGEM PRINCIPAL */}
       <div className="historico-img-wrap">
         <img src={imgHistoria1} alt="Histórico do projeto Plantamente" className="historico-img" />
+        {/* Legenda logo abaixo da imagem */}
+        <p className="historico-legenda">
+          {t("historico_photo_caption", "Idealizadores do projeto: Railson Pereira Souza e Aldeídia Pereira de Oliveira.")}
+        </p>
       </div>
 
       {/* TEXTO */}
       <div className="historico-texto">
         <p>
           O site https://plantament.org/ foi criado em 2025 e trata-se de uma plataforma científica
-          desenvolvida por um aluno de doutorado do Programa de Pós-Graduação em Farmacologia da
-          Universidade Federal do Piauí e representa uma iniciativa inovadora e alinhada às demandas
-          contemporâneas de difusão do conhecimento, especialmente no contexto da Doença de Alzheimer,
-          uma enfermidade neurodegenerativa progressiva caracterizada por comprometimento cognitivo, 
-          perda de memória e alterações comportamentais.
+          desenvolvida por Railson Pereira Souza, Aldeídia Pereira de Oliveira e Romylson Pereira
+          Sousa , e representa uma iniciativa inovadora e alinhada às demandas contemporâneas de    
+          difusão do conhecimento, especialmente no contexto da Doença de Alzheimer,uma enfermidade
+          neurodegenerativa progressiva caracterizada por comprometimento cognitivo,perda de memória
+          e alterações comportamentais.
         </p>
 
         

@@ -79,9 +79,10 @@
 /* IMAGEM */
 .historico-img-wrap {
   width: 100%;
-  margin: 1.5rem 0;
   border-radius: 12px;
   overflow: hidden;
+  margin: 24px 0;
+  text-align: center;
 }
 
 .historico-img {
@@ -89,10 +90,20 @@
   height: auto;
   max-height: 500px;
   object-fit: contain;
-  border-radius: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: block;
   margin: 0 auto;
+  max-width: 100%;
 }
+
+.historico-legenda {
+  font-size: 14px;
+  color: #666566; /* Tom cinza suave para não brigar com o texto principal */
+  font-style: italic;
+  margin-top: 8px;
+} 
+
 /* GRID DE IMAGENS */
 .historico-grid {
   display: grid;

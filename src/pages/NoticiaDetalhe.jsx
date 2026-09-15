@@ -53,10 +53,12 @@ export default function NoticiaDetalhe() {
             alt={titulo}
             style={{
               width: "100%",
-              maxHeight: "420px",
-              objectFit: "cover",
+              maxHeight: "450px",
+              objectFit: "contain", // Trocado de "cover" para "contain" se quiser ver a imagem inteira sem cortes, ou mantenha "cover" se preferir preencher o espaço
               borderRadius: "12px",
-              marginBottom: "20px"
+              marginBottom: "10px",
+              imageRendering: "crisp-edges", // Ajuda na nitidez de infográficos e textos
+              backgroundColor: "#f9fafb"    // Um fundo leve caso use "contain"
             }}
           />
 

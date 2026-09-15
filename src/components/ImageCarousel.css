@@ -65,7 +65,7 @@
 }
 
 .carousel-fonte {
-  font-size: 4px; /* Altere para o tamanho que preferir no computador (ex: 10px, 12px, 0.75rem, etc.) */
+  font-size: 12px; /* Altere para o tamanho que preferir no computador (ex: 10px, 12px, 0.75rem, etc.) */
 }
 
 @media (max-width: 900px) {

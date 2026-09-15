@@ -778,9 +778,58 @@ a {
 }
 
 @media (max-width: 768px) {
-  /* Menu Navbar */
+  /* Ajusta o Header principal no celular para empilhar com elegância */
+  .site-header {
+    padding: 0.5rem 1rem;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  /* Faz o menu rolar horizontalmente no celular para caber todas as opções sem sumir */
   .main-nav {
-    display: none; /* Mantém oculto ou pronto para hambúrguer */
+    display: flex !important;
+    overflow-x: auto;
+    width: 100%;
+    max-width: 100vw;
+    padding-bottom: 0.5rem;
+    gap: 12px !important;
+    white-space: nowrap;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .main-nav::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  .main-nav::-webkit-scrollbar-thumb {
+    background-color: rgba(49, 17, 75, 0.2);
+    border-radius: 3px;
+  }
+
+  .main-nav a {
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+
+  /* Organiza a caixa de busca e botão de acessibilidade no topo do celular */
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .search-box {
+    flex: 1;
+    max-width: none;
+  }
+
+  .search-box input {
+    width: 100%;
   }
 
   /* Hero Section no Mobile */

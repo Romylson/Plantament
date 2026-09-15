@@ -99,7 +99,13 @@ a {
   display: flex;
   align-items: center;
   gap: 8px !important;
-  font-size: 10px;
+  
+}
+
+.main-nav a {
+  font-size: 0.78rem; /* Diminui o tamanho da fonte (você pode testar 11px ou 12px se preferir) */
+  font-weight: 500;
+  padding: 0.25rem 0;
 }
 
 .main-nav .dropdown,

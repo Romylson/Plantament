@@ -64,6 +64,10 @@
   height: 86px;
 }
 
+.carousel-fonte {
+  font-size: 4px; /* Altere para o tamanho que preferir no computador (ex: 10px, 12px, 0.75rem, etc.) */
+}
+
 @media (max-width: 900px) {
   .seduc-like-carousel .carousel-slide-wrap,
   .seduc-like-carousel .carousel-banner-img {

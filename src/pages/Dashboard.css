@@ -103,7 +103,7 @@ a {
 }
 
 .main-nav a {
-  font-size: 11px !important;/* Diminui o tamanho da fonte (você pode testar 11px ou 12px se preferir) */
+  font-size: 12px !important;/* Diminui o tamanho da fonte (você pode testar 11px ou 12px se preferir) */
   font-weight: 500 !important;
   padding: 0.25rem 0;
   white-space: nowrap !important;

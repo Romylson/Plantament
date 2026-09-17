@@ -46,6 +46,16 @@ export default function Dashboard() {
       setNewsletterEmail("");
     }
   };
+  //Uso do VLibras
+    useEffect(() => {
+      const script = document.createElement("script");
+      script.src = "https://vlibras.gov.br/app/vlibras-plugin.js";
+      script.async = true;
+      script.onload = () => {
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
+      };
+      document.body.appendChild(script);
+    }, []);
 
   // Mapeamento dos 6 cards principais dentro do componente para acesso dinâmico ao 't'
   const cardsPrincipais = [
@@ -401,6 +411,13 @@ export default function Dashboard() {
         <div className="footer-bottom-bar" style={{ textAlign: "center", marginTop: "20px", paddingTop: "15px", borderTop: "1px solid rgba(255,255,255,0.1)" }}>
           <ContadorAcessos />
         </div>
+        {/* ================= WIDGET OFICIAL DO VLIBRAS ================= */}
+          <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+              <div className="vw-plugin-top-wrapper"></div>
+            </div>
+          </div>
       </footer>
     </div>
   );

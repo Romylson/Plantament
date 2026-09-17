@@ -451,7 +451,8 @@ export default function Dashboard() {
         <div className="footer-bottom-bar" style={{ textAlign: "center", marginTop: "20px", paddingTop: "15px", borderTop: "1px solid rgba(255,255,255,0.1)" }}>
           <ContadorAcessos />
         </div>
-        {/* ================= WIDGET OFICIAL DO VLIBRAS ================= */}
+      </footer>
+              {/* ================= WIDGET OFICIAL DO VLIBRAS ================= */}
           <div vw class="enabled">
             <div vw-access-button class="active"></div>
             <div vw-plugin-wrapper>
@@ -517,7 +518,6 @@ export default function Dashboard() {
             </div>
           </div>
         )}
-      </footer>
     </div>
   );
 }

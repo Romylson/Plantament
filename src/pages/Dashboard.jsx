@@ -206,23 +206,23 @@ export default function Dashboard() {
               />
               <button type="submit" aria-label={t("search_button", "Buscar")}>🔍</button>
             </form>
-             {/* BOTÃO EXCLUSIVO DE ACESSIBILIDADE */}
+             {/* BOTÃO EXCLUSIVO DE ACESSIBILIDADE 
               <button 
                 className="accessibility-btn" 
                 onClick={() => setModalAcessibilidadeAberto(true)}
                 aria-label="Abrir menu de acessibilidade"
               >
                 ♿ {t("accessibility", "Acessibilidade")}
-              </button>
+              </button> */}
 
-            {/* BOTÃO EXCLUSIVO DE PESQUISA DE OPINIÃO */}
-            <button 
-              className="feedback-header-btn" 
-              onClick={() => setModalFeedbackAberto(true)}
-              aria-label="Abrir pesquisa de opinião"
-            >
-              💬 Avalie o Site
-            </button>
+               {/* Transformando em item de menu clicável */}
+                <button 
+                  type="button" 
+                  className="menu-link-button" 
+                  onClick={() => setModalAcessibilidadeAberto(true)}
+                >
+                  ♿ {t("accessibility", "Acessibilidade")}
+                </button> 
              {/* <button 
               className="accessibility-btn"
               onClick={() => {
@@ -422,7 +422,7 @@ export default function Dashboard() {
       </section>
 
       {/* 6. Rodapé Institucional */}
-      <footer className="site-footer">
+      <footer className="site-footer" >
         <div className="footer-container">
           <div className="footer-brand">
             {/* Adicionamos a logo aqui */}
@@ -488,36 +488,6 @@ export default function Dashboard() {
             </div>
           )}
 
-      {/* ================= MODAL DE PESQUISA DE OPINIÃO (ISOLADO) ================= */}
-        {modalFeedbackAberto && (
-          <div className="accessibility-modal-overlay" onClick={() => setModalFeedbackAberto(false)}>
-            <div className="accessibility-modal-content" onClick={(e) => e.stopPropagation()}>
-              <button className="close-modal-btn" onClick={() => setModalFeedbackAberto(false)}>&times;</button>
-              
-              <h3>Pesquisa de Opinião</h3>
-              <p>Ajude-nos a melhorar o PlantaMente.org avaliando sua experiência!</p>
-
-              <form onSubmit={(e) => { e.preventDefault(); alert("Obrigado pela sua avaliação!"); setModalFeedbackAberto(false); }}>
-                <div style={{ margin: "15px 0" }}>
-                  <label style={{ fontSize: "0.85rem", fontWeight: "600", display: "block", marginBottom: "8px" }}>Como você avalia o site?</label>
-                  <div style={{ display: "flex", gap: "10px", justifyContent: "center" }}>
-                    <label><input type="radio" name="nota" required /> Excelente</label>
-                    <label><input type="radio" name="nota" /> Bom</label>
-                    <label><input type="radio" name="nota" /> Regular</label>
-                  </div>
-                </div>
-
-                <textarea 
-                  placeholder="Deixe seu comentário ou sugestão..." 
-                  rows="3" 
-                  style={{ width: "100%", padding: "8px", borderRadius: "8px", border: "1px solid #ccc", marginBottom: "15px", resize: "none" }}
-                ></textarea>
-
-                <button type="submit" className="btn btn-primary" style={{ width: "100%" }}>Enviar Feedback</button>
-              </form>
-            </div>
-          </div>
-        )}
-    </div>
+      </div>
   );
 }

@@ -206,23 +206,16 @@ export default function Dashboard() {
               />
               <button type="submit" aria-label={t("search_button", "Buscar")}>🔍</button>
             </form>
-             {/* BOTÃO EXCLUSIVO DE ACESSIBILIDADE 
+             {/* BOTÃO EXCLUSIVO DE ACESSIBILIDADE */}
               <button 
                 className="accessibility-btn" 
                 onClick={() => setModalAcessibilidadeAberto(true)}
                 aria-label="Abrir menu de acessibilidade"
               >
+                <a href="#secao-acessibilidade" className="menu-link-item">
                 ♿ {t("accessibility", "Acessibilidade")}
-              </button> */}
-
-               {/* Transformando em item de menu clicável */}
-                <button 
-                  type="button" 
-                  className="menu-link-button" 
-                  onClick={() => setModalAcessibilidadeAberto(true)}
-                >
-                  ♿ {t("accessibility", "Acessibilidade")}
-                </button> 
+                </a>
+              </button> 
              {/* <button 
               className="accessibility-btn"
               onClick={() => {
@@ -465,7 +458,7 @@ export default function Dashboard() {
             <div className="accessibility-modal-overlay" onClick={() => setModalAcessibilidadeAberto(false)}>
               <div className="accessibility-modal-content" onClick={(e) => e.stopPropagation()}>
                 <button className="close-modal-btn" onClick={() => setModalAcessibilidadeAberto(false)}>&times;</button>
-                
+                <div id="secao-acessibilidade" className="bloco-acessibilidade">
                 <h3>Painel de Acessibilidade</h3>
                 <p>Personalize sua visualização no portal PlantaMente.</p>
 
@@ -483,6 +476,7 @@ export default function Dashboard() {
                   >
                     🔍 Aumentar Tamanho da Fonte
                   </button>
+                  </div>
                 </div>
               </div>
             </div>
